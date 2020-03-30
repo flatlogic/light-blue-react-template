@@ -1,0 +1,171 @@
+@import '../../../../styles/app';
+
+.calendarRectangle {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: $content-color;
+  font-size: .9rem;
+  overflow: visible;
+
+}
+
+.calendarRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mainCalendar {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .calendarHeader {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: $content-color;
+
+    .titleHeader {
+      width: 100%;
+      height: 70%;
+      white-space: nowrap;
+      font-size: 1.2em;
+      background-color: transparent;
+
+      @media (min-width: 992px) {
+        font-size: 1.4em;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 1.2em;
+      }
+
+      .headerText {
+        flex: 5;
+        display: flex;
+        
+        .todayLabel {
+          flex: 1;
+          font-size: 0.8em;
+        }
+        .monthLabel {
+          flex: 3;
+          color: $content-color;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .daysHeader {
+      width: 100%;
+      padding: 5px 0;
+      background-color: transparent;
+
+      .dayName {
+        color: $content-color;
+      }
+    }
+
+    .buttonContainer {
+      width: 100%;
+      height: 30%;
+      .eventButton {
+        flex-grow: 1;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .daysContainer {
+    width: 100%;
+    background: transparent;
+    height: inherit;
+    padding: 15px 0;
+    .week {
+      height: 15%;
+    }
+  }
+} 
+
+
+.calendarItemContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  transition: all 0.4s ease-in-out 0s;
+
+}
+
+.calendarItem-container.arrow {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #d6dee5;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 30px;
+  width: 30px;
+
+  .dayNumber {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    margin: 3px 0;
+    color: $content-color;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+
+
+  &.hasEvents {
+    .dayNumber {
+      position: relative;
+      color: $content-color;
+      background-color: rgba(0,0,0,.15);
+      border-radius: 50%;
+      font-weight: bold;
+    }
+  }
+
+  &.differentMonth {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+@media(max-width: 810px) {
+  .day .dayNumber {
+    width: 25px;
+    height: 25px;
+  }
+}
+.day.selected.hasEvents {
+  position: relative;
+}
+
+.calendarDot {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: inherit;
+}

@@ -1,0 +1,341 @@
+@import '../../styles/app';
+
+.title {
+  margin-top: 0;
+  color: $widget-title-color;
+  padding: 15px 20px 0;
+
+  @include clearfix();
+}
+
+:global .h-100 {
+  height: 100%;
+}
+
+.reloading {
+  min-height: 150px;
+}
+
+.widgetBackground {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193B);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 55;
+}
+
+:global .fullscreened{
+  position: fixed!important;
+  top: 50%;
+  right: 0px;
+  bottom: 0px;
+  height: 60vh;
+  left: 50%;
+  margin: 0px;
+  z-index: 10000;
+  transform: translate(-50%, -50%)!important;
+}
+
+@media(max-width: 1400px) {
+  :global .fullscreened{
+    position: fixed!important;
+    top: 50%;
+    height: 70vh;
+    right: 0px;
+    bottom: 0px;
+    left: 50%;
+    margin: 0px;
+    z-index: 10000;
+    transform: translate(-50%, -50%)!important;
+  }
+}
+
+@media(max-width: 992px) {
+  :global .fullscreened{
+    position: fixed!important;
+    top: 50%;
+    height: 90vh;
+    width: 90vw;
+    right: 0px;
+    bottom: 0px;
+    left: 50%;
+    margin: 0px;
+    z-index: 10000;
+    transform: translate(-50%, -50%)!important;
+  }
+}
+
+:global .widget.collapsed {
+  > header {
+    transition: padding .3s linear;
+    transition-delay: 0.2s;
+    padding: $widget-padding-vertical $widget-padding-horizontal;
+  }
+  > h5 {
+    transition: padding .3s, margin-bottom .3s linear;
+    transition-delay: 0.2s;
+    padding: $widget-padding-vertical $widget-padding-horizontal;
+    margin-bottom: 0;
+  }
+}
+
+
+.widget {
+  color: $content-color;
+  display: block;
+  position: relative;
+  margin-bottom: $grid-gutter-width;
+  border-radius: $widget-border-radius;
+  background: $widget-bg-color;
+  box-shadow: $widget-shadow;
+  > header {
+    transition: padding .3s linear;
+    padding: $widget-padding-vertical $widget-padding-horizontal 0;
+    color: $text-color;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      color: $text-color;
+    }
+  }
+
+  :global {
+    
+    .loader {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .spinner {
+        position: absolute;
+        top: 50%;
+        width: 100%; //ie fix
+        margin-top: -10px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .widget-body.undo_padding {
+      margin: $widget-padding-vertical (-$widget-padding-horizontal) (-$widget-padding-vertical);
+      
+
+      + footer {
+        margin-top: $widget-padding-vertical;
+      }
+    }
+
+  }
+
+  &:global.bg-transparent {
+    box-shadow: none;
+  }
+}
+.widget {
+  &:global.p-0 .widget-body {
+      padding: 0!important;
+  }  
+}
+
+.widgetBody {
+  @include clearfix();
+  padding: $widget-padding-vertical $widget-padding-horizontal;
+
+  > footer {
+    margin: $spacer/2 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+    padding: 10px 20px;
+    border-bottom-left-radius: $widget-border-radius;
+    border-bottom-right-radius: $widget-border-radius;
+  }
+}
+
+.widgetControls + .widgetBody {
+  margin-top: $widget-padding-vertical;
+}
+
+.widgetControls + .widgetBody.widgetCollapsing {
+  margin-top: 0;
+}
+
+.customControlItem {
+  cursor: pointer;
+}
+
+.widgetControls,
+:global(.widget-controls) {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 14px;
+  font-size: $font-size-sm;
+
+  & > div {
+    display: flex;
+  }
+
+  button {
+    display: flex;
+    padding: 1px 4px;
+    border-radius: 4px;
+    color: $white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include transition(color 0.15s ease-in-out);
+
+    &:hover {
+      color: rgba($white, 0.75);
+      text-decoration: none;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    :global {
+      .la {
+        position: relative;
+        top: 2px;
+      }
+
+      .glyphicon {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+.inverse {
+  top: 2px;
+  position: relative;
+  margin-left: 3px;
+
+  :global {
+    .glyphicon {
+      vertical-align: baseline;
+    }
+  }
+}
+
+:global {
+  .widget-image {
+    position: relative;
+    overflow: hidden;
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+    border-radius: $border-radius;
+
+    > img {
+      max-width: 100%;
+      border-radius: $border-radius $border-radius 0 0;
+      transition: transform 0.15s ease;
+    }
+
+    &:hover > img {
+      transform: scale(1.1, 1.1);
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 20px;
+    }
+
+    .info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 20px;
+    }
+  }
+
+  .widget-footer-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .widget-sm {
+    height: 230px;
+  }
+
+  .widget-md {
+    height: 373px;
+  }
+
+  .widget-padding-md {
+    padding: $widget-padding-vertical $widget-padding-horizontal;
+  }
+
+  .widget-padding-lg {
+    padding: $widget-padding-vertical*2 $widget-padding-horizontal*2;
+  }
+
+  .widget-body-container {
+    // position: relative;
+    height: 100%;
+  }
+
+  .widget-top-overflow,
+  .widget-middle-overflow {
+    position: relative;
+    margin: 0 (-$widget-padding-horizontal);
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  .widget-top-overflow {
+    margin-top: (-$widget-padding-vertical);
+    border-top-left-radius: $widget-border-radius;
+    border-top-right-radius: $widget-border-radius;
+    overflow: hidden;
+
+    > img {
+      border-top-left-radius: $widget-border-radius;
+      border-top-right-radius: $widget-border-radius;
+    }
+
+    > .btn-toolbar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      margin-right: $widget-padding-horizontal;
+
+      @include media-breakpoint-up(md) {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  .widget-icon {
+    opacity: 0.5;
+    font-size: 42px;
+    height: 60px;
+    line-height: 45px;
+    display: inline-block;
+  }
+}
+
+.widgetLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

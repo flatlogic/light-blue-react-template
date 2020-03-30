@@ -1,0 +1,263 @@
+// Meta
+
+$enable-shadows:            true !default;
+
+$glyphicons-halflings-include-bonus: false !default;
+$glyphicons-halflings-class-prefix: glyphicon !default;
+$glyphicons-halflings-font-base-size: 14px !default;
+
+$glyphicons-halflings-font-path: '../fonts/glyphicons' !default;
+$fa-font-path: '../fonts/font-awesome' !default;
+
+/*
+ * typography
+ * ======================================================================== */
+$font-size-initial:       14px; // reset default browser value from 16px to 13px
+$font-size-base:          1rem !default;
+$font-size-lg:            1.25rem !default;
+$font-size-sm:            0.875rem !default;
+$font-size-larger:        1.1rem;
+$font-size-mini:          0.9rem;
+$font-size-index:         0.7rem;
+
+$font-family-base: 'Open Sans', sans-serif;
+
+// Color system
+//
+
+$white:    #f4f4f5 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #d6dee5 !default;
+$gray-400: #c1ccd3 !default;
+$gray-500: #a3aeb7 !default;
+$gray-600: #798892 !default;
+$gray-700: #495057 !default;
+$gray-800: #3c484f !default;
+$gray-900: #29323a !default;
+$black:    #000 !default;
+$gray-light: $gray-100 !default;
+
+$bg-custom-dark: #040620;
+$main-gradient: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193B);
+
+$lime:       #8cbf26 !default;
+$red:        #F45722 !default;
+$red-dark:   #d04f4f !default;
+$blue:       #1870DC !default;
+$green:      #58D777 !default;
+$orange:     #f0af03 !default;
+$pink:       #e671b8 !default;
+$purple:     #a700ae !default;
+$brown:      #a05000 !default;
+$teal:       #4ebfbb !default;
+$subtle-blue:#474D84 !default;
+$gray:       #595D78 !default;
+$inverse:    #30314E !default;
+$violet_deep:#1B1E3C !default;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: rgba($white,.9),
+  success: $green,
+  info: $teal,
+  warning: $orange,
+  danger: $red,
+  dark: $gray-700,
+  inverse: $inverse,
+  gray: $gray,
+  light: $gray-100,
+  default: $subtle-blue,
+  primary-light: #dee4ee,
+  success-light: #ecfaec,
+  info-light: #f2fafa,
+  warning-light: #fdf7e6,
+  danger-light: #fff2ef,
+);
+
+$link-color: #1870DC;
+
+$text-color: rgba($white,.9) !default;
+$content-color: rgba($white,.6) !default;
+$text-muted:  $gray-400 !default;
+
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-thin !default;
+
+$addition-bg: $gray-100 !default;
+
+$body-bg: #fafbff !default;
+$body-bg-light: lighten($body-bg, 3%);
+
+$logo-color: $white;
+//== Components
+//
+
+$grid-gutter-width: 40px;
+
+$content-padding: 40px;
+
+$nav-link-padding: 10px;
+
+$border-radius:          0.3rem !default;
+$border-radius-lg:       0.35rem !default;
+$border-radius-sm:       0.25rem !default;
+
+//== Sidebar
+//
+
+$sidebar-width-open: 200px;
+$sidebar-width-closed: 50px;
+$sidebar-transition-time: 0.3s !default;
+
+$sidebar-bg-color: transparent !default;
+$sidebar-color: rgba($white, .9) !default;
+$sidebar-action-bg: transparent !default;
+
+$sidebar-item-border-color: transparent !default;
+$sidebar-item-active-color: $orange !default;
+$sidebar-item-padding: 13px 20px !default;
+$sidebar-sub-item-padding: 7px 20px 7px 35px;
+$sidebar-scrollbar-bg: transparent;
+$sidebar-item-hover-bg-color: rgba(0,0,0,.07);
+$chat-sidebar-bg-color: $sidebar-bg-color !default;
+
+$breadcrumb-divider: '>';
+$breadcrumb-padding-y: 0;
+$breadcrumb-bg: transparent;
+
+// Widgets
+// -------------------------
+$widget-bg: rgba(0, 0, 0, .24);
+$widget-border-radius: 10px;
+$widget-padding-vertical: 15px !default;
+$widget-padding-horizontal: 20px !default;
+$widget-bg-color: rgba(0,0,0,.24);
+
+$widget-title-color: #fff;
+$widget-shadow: 0 25px 20px -20px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.06);
+$widget-shadow-designated: -1px 0 8px $gray-400;
+
+$text-transparent: opacify($widget-bg-color, .07);
+$bg-addition: darken($widget-bg-color, .07);
+
+$input-btn-line-height: 1.5;
+
+$input-btn-padding-y:       0.5rem;
+$input-btn-padding-x:       0.75rem;
+
+$input-color:                    $gray-700;
+$input-border-color:             $white !default;
+$input-focus-border-color:       #66afe9 !default;
+
+$input-btn-padding-y-sm: 0.4rem;
+$input-btn-padding-x-sm: 0.8rem;
+
+$input-group-addon-bg:           $bg-addition;
+$input-group-addon-border-color: transparent;
+
+
+//== Navbar
+//
+
+$navbar-height:  64px !default;
+$navbar-padding-y: 0 !default;
+$navbar-padding-x: 0 !default;
+
+// Custom navbar links
+$navbar-link-color: $text-transparent !default;
+$navbar-link-hover-color: $gray-800 !default;
+$navbar-link-hover-bg: transparent !default;
+$navbar-link-active-color: $gray-700 !default;
+$navbar-link-active-bg: $gray-300 !default;
+$navbar-link-disabled-color: $gray-400 !default;
+$navbar-link-disabled-bg: transparent !default;
+$navbar-bg: transparent !default;
+
+// Dropdowns
+$dropdown-link-color: $text-color;
+$dropdown-link-hover-bg: theme-color('primary');
+$dropdown-link-hover-color: $text-color;
+$dropdown-bg: rgba($bg-addition, .8);
+
+//== Navs
+//
+$nav-tabs-active-link-hover-bg:  $widget-bg-color !default;
+$nav-tabs-active-link-hover-color: $gray-700 !default;
+
+//== Forms
+//
+$input-focus-border-color: #4d90fe !default; //webkit focus color
+
+//*  Popover  */
+$popover-bg: #ebeff1 !default;
+$popover-arrow-outer-color: $popover-bg !default;
+$popover-arrow-color: $popover-bg !default;
+
+// Badge
+$badge-font-weight: 700;
+$badge-font-size: 0.875em;
+$badge-padding-y: 0.4em;
+$badge-padding-x: 0.4em;
+
+// Breadcrumbs
+$breadcrumb-active-color: $gray-700;
+
+// Progress bars
+$progress-height: 0.65rem !default;
+
+// Alerts
+$alert-transparent: 0.25;
+
+// Buttons
+$input-btn-padding-y:       0.375rem !default;
+$input-btn-padding-x:       1rem !default;
+
+$btn-default-bg: $addition-bg !default;
+$btn-default-border: $addition-bg !default;
+
+// Table
+$table-border-width: 1px;
+$table-accent-bg: $widget-bg-color !default;
+$table-border-color: rgba(51,51,51,0.35) !default;
+
+// Pagination
+$pagination-color:                     $gray-700 !default;
+$pagination-bg:                        #fff !default;
+$pagination-border:                    transparent !default;
+
+$pagination-hover-color:               $gray-700 !default;
+$pagination-hover-bg:                  transparent !default;
+$pagination-hover-border:              transparent !default;
+$pagination-hover-border-color:        transparent !default;
+
+$pagination-active-color:              $gray-700 !default;
+$pagination-active-bg:                 transparent !default;
+$pagination-active-border:             transparent !default;
+$pagination-active-border-color:       transparent !default;
+
+$pagination-disabled-color:            $gray-700 !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           transparent !default;
+
+// == Components
+$jumbotron-bg: $widget-bg-color;
+
+// == Components
+$padding-small-vertical:    0.25rem !default;
+$padding-small-horizontal:  0.75rem !default;
+
+// == Cards
+$card-border-radius: $widget-border-radius;
+
+// Screens
+// -------------------------
+
+$screen-lg-height: 670px !default;
+
+// Awesome Checkbox
+// ------------------------
+$awesome-checkbox-default-color: #eee !default;

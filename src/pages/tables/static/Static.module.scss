@@ -1,0 +1,13 @@
+@import '../../../styles/app';
+
+.root {
+
+}
+
+.mainTableWidget {
+  :global {
+    .table td {
+      border: none;
+    }
+  }
+}

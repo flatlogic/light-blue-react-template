@@ -1,0 +1,6 @@
+{
+  "name": "LinksGroup",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LinksGroup.js"
+}

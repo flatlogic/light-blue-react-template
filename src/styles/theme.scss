@@ -1,0 +1,24 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import '../../node_modules/bootstrap/scss/functions';
+@import 'variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/glyphicons-halflings/scss/glyphicons-halflings';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '../../node_modules/line-awesome/dist/css/line-awesome.css';
+@import '../fonts/flaticon/flaticon';
+@import '../../node_modules/animate.css/animate';
+@import '../../node_modules/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox';
+@import '../../node_modules/rickshaw/rickshaw.css';
+@import '../../node_modules/react-toastify/dist/ReactToastify.css';
+
+@import 'mixins';
+@import 'base';
+@import 'auth';
+@import 'overrides';
+@import 'general';
+@import 'utils';
+
