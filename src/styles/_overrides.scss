@@ -939,3 +939,11 @@ pre code {
     border-top: 1px solid $bg-custom-dark;
   }
 }
+
+.list-group-item.bg-warning-light, .list-group-item.bg-warning-light:hover {
+  color: $gray-700;
+}
+
+.list-group-item .deemphasize {
+  color: $gray-600;
+}

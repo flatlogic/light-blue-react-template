@@ -14,7 +14,7 @@ class ProgressDemo extends React.Component {
       <ListGroup className={[s.listGroup, 'thin-scroll'].join(' ')}>
         <ListGroupItem className={s.listGroupItem}>
           <span className="text-muted float-right">60%</span>
-          <h6 className="m-0 mb-1 text-gray">
+          <h6 className="m-0 mb-1">
             <strong>Urgent:</strong>
             &nbsp;Rails 4.1.0 upgrade
           </h6>
@@ -23,7 +23,7 @@ class ProgressDemo extends React.Component {
         </ListGroupItem>
         <ListGroupItem className={s.listGroupItem}>
           <span className="text-muted float-right">83%</span>
-          <h6 className="m-0 mb-1 text-gray">
+          <h6 className="m-0 mb-1">
             <strong>Primary:</strong>
             &nbsp;Light Blue App
           </h6>
@@ -47,7 +47,7 @@ class ProgressDemo extends React.Component {
         </ListGroupItem>
         <ListGroupItem className={s.listGroupItem}>
           <span className="text-muted float-right">86%</span>
-          <h6 className="m-0 mb-1 deemphasize text-gray">
+          <h6 className="m-0 mb-1">
             Complete project planning
           </h6>
           <Progress className={['progress-xs', 'm-0'].join(' ')} color="danger" value="86" />
@@ -55,7 +55,7 @@ class ProgressDemo extends React.Component {
         </ListGroupItem>
         <ListGroupItem className={s.listGroupItem}>
           <span className="text-muted float-right">100%</span>
-          <h6 className="m-0 mb-1 deemphasize text-gray">
+          <h6 className="m-0 mb-1">
             <strong>Completed:</strong>
             &nbsp;Instruct newbies on coding standards
           </h6>

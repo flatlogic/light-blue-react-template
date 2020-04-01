@@ -211,7 +211,7 @@ class Header extends React.Component {
           </Dropdown>
           <NavItem className={`${s.divider} text-white`} />
           <Dropdown nav isOpen={this.state.settingsOpen} toggle={this.toggleSettingsDropdown}>
-            <DropdownToggle nav className={`${s.navItem} text-white d-sm-none`}>
+            <DropdownToggle nav className={`${s.navItem} text-white`}>
               <i className="glyphicon glyphicon-cog" />
             </DropdownToggle>
             <DropdownMenu className={`${s.dropdownMenu} ${s.settings}`}>
