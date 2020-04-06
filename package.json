@@ -52,6 +52,9 @@
       "^.+\\.module\\.(css|sass|scss)$"
     ]
   },
+  "resolutions": {
+    "minimist": "^1.2.2"
+  },
   "dependencies": {
     "@amcharts/amcharts4": "^4.7.1",
     "@amcharts/amcharts4-geodata": "^4.1.7",
