@@ -53,7 +53,8 @@
     ]
   },
   "resolutions": {
-    "minimist": "^1.2.2"
+    "minimist": "^1.2.2",
+    "acorn": "^7.1.1"
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.7.1",
