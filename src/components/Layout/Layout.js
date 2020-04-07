@@ -15,6 +15,7 @@ import Dashboard from '../../pages/dashboard';
 
 import Header from '../Header';
 import Sidebar from '../Sidebar';
+import BreadcrumbHistory from '../BreadcrumbHistory';
 import { openSidebar, closeSidebar } from '../../actions/navigation';
 import s from './Layout.module.scss';
 
@@ -68,6 +69,7 @@ class Layout extends React.Component {
           <Sidebar />
           <Hammer onSwipe={this.handleSwipe}>
             <main className={s.content}>
+              <BreadcrumbHistory url={this.props.location.pathname} />
               <TransitionGroup>
                 <CSSTransition
                   key={this.props.location.key}

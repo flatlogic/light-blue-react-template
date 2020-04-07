@@ -26,11 +26,6 @@ class Icons extends React.Component {
   render() {
     return (
       <section className={`${s.root} mb-4`}>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">YOU ARE HERE</li>
-          <li className="breadcrumb-item">App</li>
-          <li className="breadcrumb-item active">UI Icons</li>
-        </ol>
         <h1 className="page-title">UI - <span className="fw-semi-bold">Icons</span></h1>
 
         {/* tabs */}

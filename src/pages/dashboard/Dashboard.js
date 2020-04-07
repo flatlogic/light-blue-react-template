@@ -64,12 +64,6 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">YOU ARE HERE</li>
-          <li className="breadcrumb-item">App</li>
-          <li className="breadcrumb-item">Main</li>
-          <li className="breadcrumb-item active">Dashboard</li>
-        </ol>
         <h1 className="page-title">Dashboard &nbsp;
           <small>
             <small>The Lucky One</small>

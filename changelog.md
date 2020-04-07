@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.0]
+
+Added Breadcrumbs component
+
 ## [1.1.1]
 
 Fixed tables color

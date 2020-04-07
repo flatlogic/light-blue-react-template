@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-    Breadcrumb,
-    BreadcrumbItem,
     Row,
     Col,
 } from 'reactstrap';
@@ -10,11 +8,6 @@ import Widget from '../../components/Widget';
 
 const Typography = () => (
     <div>
-        <Breadcrumb>
-            <BreadcrumbItem>YOU ARE HERE</BreadcrumbItem>
-            <BreadcrumbItem>App</BreadcrumbItem>
-            <BreadcrumbItem active>Typography</BreadcrumbItem>
-        </Breadcrumb>
         <h1 className="page-title">Typography - <span className="fw-semi-bold">Texts & Display</span></h1>
         <Row>
             <Col xs={12} md={6}>

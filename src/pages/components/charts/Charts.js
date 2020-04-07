@@ -67,11 +67,6 @@ class Charts extends React.Component {
     const { cd, ld, initEchartsOptions, sparklineData } = this.state
     return (
       <div className={s.root}>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">YOU ARE HERE</li>
-          <li className="breadcrumb-item">App</li>
-          <li className="breadcrumb-item active">Charts</li>
-        </ol>
         <h1 className="page-title">Visual - <span className="fw-semi-bold">Charts</span></h1>
         <div>
           <Row>
