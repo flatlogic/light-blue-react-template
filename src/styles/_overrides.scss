@@ -250,14 +250,15 @@ small {
 }
 
 .dropdown-toggle::after {
-  font-family: LineAwesome, sans-serif;
-  content: "\F110";
+  font-family: Line Awesome Free, sans-serif;
+  content: "\F107";
   border: none;
   width: auto;
   height: auto;
   vertical-align: baseline;
   opacity: .8;
   font-size: 85%;
+  font-weight: 600;
 }
 
 .btn-link {
@@ -901,14 +902,24 @@ div.abc-radio label {
 
     &-body {
       text-align: center;
+      color: $violet_deep;
+
+      button {
+        border-color: $violet_deep;
+        color: $violet_deep;
+        &:hover {
+          border-color: transparent;
+        }
+      }
     }
   }
 
-  .notification-close {
+  .notifications-close {
     height: $font-size-base;
+    color: $violet_deep;
 
     &:hover {
-      color: darken($white, 10%);
+      color: lighten($violet_deep, 10%);
     }
   }
 }

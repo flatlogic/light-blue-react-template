@@ -34,6 +34,7 @@ import sender3 from '../../images/3.png';
 import avatar from '../../images/people/a5.jpg';
 
 import s from './Header.module.scss';
+import 'animate.css'
 
 class Header extends React.Component {
   static propTypes = {
@@ -110,7 +111,7 @@ class Header extends React.Component {
   }
 
   toggleSidebar() {
-    this.props.isSidebarOpened 
+    this.props.isSidebarOpened
       ? this.props.dispatch(closeSidebar())
       : this.props.dispatch(openSidebar())
   }
@@ -126,7 +127,7 @@ class Header extends React.Component {
   render() {
     return (
       <Navbar className={`d-print-none ${s.root}`}>
-        <UncontrolledAlert className={`${s.alert} mr-3 d-lg-down-none`}>
+        <UncontrolledAlert className={`${s.alert} mr-3 d-lg-down-none animate__animated animate__bounceIn animate__delay-1s`}>
           <i className="fa fa-info-circle mr-1" /> Check out Light Blue <button className="btn-link" onClick={() => this.setState({ settingsOpen: true })}>settings</button> on
           the right!
         </UncontrolledAlert>
@@ -150,7 +151,7 @@ class Header extends React.Component {
             </InputGroup>
           </FormGroup>
         </Form>
-  
+
         <Nav className="ml-md-0 d-flex nav-responsive">
           <Dropdown nav isOpen={this.state.notificationsOpen} toggle={this.toggleNotifications} id="basic-nav-dropdown" className={`${s.notificationsMenu}`} style={{marginRight: 'auto'}}>
             <DropdownToggle nav caret style={{color: "#f4f4f5", padding: 0}}>
@@ -160,7 +161,7 @@ class Header extends React.Component {
               <span className={`small ${s.accountCheck}`}>Philip smith</span>
               <Badge className={s.badge} color="primary">13</Badge>
             </DropdownToggle>
-            <DropdownMenu right className={`${s.notificationsWrapper} py-0 animated animated-fast fadeInUp`}>
+            <DropdownMenu right className={`${s.notificationsWrapper} py-0 animate__animated animate__faster animate__fadeInUp`}>
               <Notifications />
             </DropdownMenu>
           </Dropdown>

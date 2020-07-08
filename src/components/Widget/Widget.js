@@ -109,7 +109,7 @@ class Widget extends React.Component {
   }
 
   handleExpand = () => {
-    
+
     this.setState({
       height: 'auto',
       collapseWidget: false
@@ -139,9 +139,9 @@ class Widget extends React.Component {
   handleFullscreen = () => {
     this.setState({ fullscreened: !this.state.fullscreened });
   }
-  
+
   render() {
-  
+
     const {
       title,
       className,
@@ -183,12 +183,12 @@ class Widget extends React.Component {
       modal,
     } = this.state;
 
-    
-    
+
+
     return (
     <React.Fragment>
       <section
-        style={{display: hideWidget ? 'none' : ''}}  
+        style={{display: hideWidget ? 'none' : ''}}
         className={
           classNames('widget', {'fullscreened' : !!fullscreened, 'collapsed' : !!collapseWidget}, s.widget, className, (reloading || fetchingData) ? s.reloading : '')
         } {...attributes}
@@ -200,7 +200,7 @@ class Widget extends React.Component {
               : <header className={s.title}>{title}</header>
           )
         }
-        
+
         {
           !customControls && mainControls && (
             <div className={`${s.widgetControls} widget-controls`}>
@@ -236,7 +236,7 @@ class Widget extends React.Component {
                   )}
                 </button>
               )}
-              {!fullscreened && 
+              {!fullscreened &&
                 collapse && (
                   <span>
                     <button onClick={this.handleCollapse} id={`collapseId-${randomId}`}>
@@ -292,11 +292,11 @@ class Widget extends React.Component {
               <DropdownMenu className="bg-widget-transparent" right>
                 <DropdownItem onClick={this.handleReload} title="Reload">
                   Reload &nbsp;&nbsp;
-                  <span className="badge badge-pill badge-success animated bounceIn">
+                  <span className="badge badge-pill badge-success animate__animated animate__bounceIn">
                     <strong>9</strong>
                   </span>
                 </DropdownItem>
-                
+
                 <DropdownItem onClick={this.handleFullscreen} title={!fullscreened ? "Full Screen" : "Restore"}>{!fullscreened ? "Fullscreen" : "Restore"} </DropdownItem>
                 <DropdownItem divider />
                 {!fullscreened && (!prompt ? <DropdownItem onClick={this.handleClose} title="Close">Close</DropdownItem>
@@ -341,7 +341,7 @@ class Widget extends React.Component {
                   </p>
                   <p className="text-center">
                     <button onClick={this.handleFullscreen} className="btn btn-danger btn-lg">
-                      {!fullscreened ? 
+                      {!fullscreened ?
                         <React.Fragment>Fullscreen me! &nbsp;
                           <i className="fa fa-check" />
                         </React.Fragment>
@@ -353,9 +353,9 @@ class Widget extends React.Component {
               </div>
             ) : children}
           </div>
-    
+
        </AnimateHeight>
-       
+
       </section>
       {prompt && (
         <Modal isOpen={modal} toggle={this.toggleModal} id="news-close-modal">
@@ -368,7 +368,7 @@ class Widget extends React.Component {
           <Button color="danger" onClick={this.closeWithModal} id="news-widget-remove">Yes,
             remove widget</Button>
         </ModalFooter>
-      </Modal> 
+      </Modal>
       )}
       <div style={{display: fullscreened ? 'block'  : 'none'}} className={s.widgetBackground}></div>
       </React.Fragment>
