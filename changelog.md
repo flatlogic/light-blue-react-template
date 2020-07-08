@@ -2,11 +2,11 @@
 
 ## [1.2.1]
 
-Update dependencies
-Add animation to alert in header
-Fix color in notifications
-Fix animated classes
-Fix color in chart dropdown menu
+- Update dependencies
+- Add animation to alert in header
+- Fix color in notifications
+- Fix animated classes
+- Fix color in chart dropdown menu
 
 ## [1.2.0]
 
