@@ -58,7 +58,7 @@ yarn
 ## Quick start
 Run development server
 ```shell
-yarn run serve
+yarn run
 ```
 
 ## Support
