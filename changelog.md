@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.2]
+
+- Update dependencies, fixed security vulnerability
+
 ## [1.2.1]
 
 - Update dependencies

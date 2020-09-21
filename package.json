@@ -57,7 +57,8 @@
     "acorn": "^7.1.1",
     "serialize-javascript": "^2.1.1",
     "kind-of": "^6.0.3",
-    "websocket-extensions": "^0.1.4"
+    "websocket-extensions": "^0.1.4",
+    "node-forge": "^0.10.0"
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.9.28",
@@ -66,7 +67,6 @@
     "apexcharts": "^3.19.3",
     "awesome-bootstrap-checkbox": "1.0.1",
     "bootstrap": "4.5.0",
-    "bootstrap_calendar": "https://github.com/xero/bootstrap_calendar.git#1.0.1",
     "classnames": "^2.2.6",
     "echarts": "^4.8.0",
     "echarts-for-react": "^2.0.16",
