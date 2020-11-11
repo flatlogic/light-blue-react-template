@@ -96,7 +96,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "rickshaw": "1.7.1",
-    "tabler-icons": "^1.10.0"
+    "@tabler/icons": "^1.35.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.4",
