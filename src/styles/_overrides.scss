@@ -4,9 +4,9 @@
 }
 
 .nav-sm {
-    @media (max-width: breakpoint-max(sm)) {
-      width: 100%;
-    }
+  @media (max-width: breakpoint-max(sm)) {
+    width: 100%;
+  }
 }
 
 .navbar {
@@ -29,6 +29,17 @@
     }
   }
 
+  &.main-navbar {
+    .nav {
+      li a {
+        color: $content-color;
+      }
+      li {
+        color: $content-color;
+      }
+    }
+  }
+
   .nav-item {
     .nav-link {
       display: flex;
@@ -46,7 +57,6 @@
         font-size: 20px;
       }
     }
-
   }
 
   .nav > .nav-item > .nav-link.bs-tether-target.show {
@@ -83,7 +93,7 @@
 .progress {
   height: $spacer * 1.3;
   margin-bottom: $spacer / 2;
-  background: $bg-addition;
+  background: $bg-progress;
 }
 
 .progress-sm {
@@ -153,16 +163,16 @@ legend {
 /*  Badge */
 // Add colors for badges
 .badge {
-  padding: 4px;
-  font-weight: $font-weight-bold;
-  font-size: 11px;
+  padding: $badge-padding-y $badge-padding-x;
+  font-weight: $font-weight-semi-bold;
+  font-size: 14px;
 }
 
 .badge-success,
 .badge-info,
 .badge-warning,
 .badge-danger {
-  color: $violet_deep;
+  color: $white;
 }
 
 .badge-white {
@@ -176,7 +186,6 @@ legend {
 .badge {
   &.badge-pill {
     padding: 0.4em 0.6em;
-    font-weight: 700;
   }
 
   .list-group-item > & {
@@ -256,7 +265,7 @@ small {
   width: auto;
   height: auto;
   vertical-align: baseline;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 85%;
   font-weight: 600;
 }
@@ -433,62 +442,62 @@ small {
 }
 
 .alert-success {
-  background: theme-color('success');
+  background: theme-color("success");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('success');
-    background: rgba(theme-color('success'), $alert-transparent);
+    color: theme-color("success");
+    background: rgba(theme-color("success"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('success');
+    color: theme-color("success");
   }
 }
 
 .alert-info {
-  background: theme-color('info');
+  background: theme-color("info");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('info');
-    background: rgba(theme-color('info'), $alert-transparent);
+    color: theme-color("info");
+    background: rgba(theme-color("info"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('info');
+    color: theme-color("info");
   }
 }
 
 .alert-warning {
-  background: theme-color('warning');
+  background: theme-color("warning");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('warning');
-    background: rgba(theme-color('warning'), $alert-transparent);
+    color: theme-color("warning");
+    background: rgba(theme-color("warning"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('warning');
+    color: theme-color("warning");
   }
 }
 
 .alert-danger {
-  background: theme-color('danger');
+  background: theme-color("danger");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('danger');
-    background: rgba(theme-color('danger'), $alert-transparent);
+    color: theme-color("danger");
+    background: rgba(theme-color("danger"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('danger');
+    color: theme-color("danger");
   }
 }
 
@@ -508,7 +517,7 @@ small {
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  content: '>';
+  content: ">";
   color: $gray-600;
 }
 
@@ -700,7 +709,7 @@ h6,
   border-bottom-right-radius: $widget-border-radius;
 
   > .tab-pane {
-    padding: $spacer*2;
+    padding: $spacer * 2;
   }
 }
 
@@ -725,7 +734,7 @@ h6,
 
 code {
   font-size: 85%;
-  background-color: rgba($primary,.3);
+  background-color: rgba($primary, 0.3);
   color: $success;
   padding: 2px;
   border-radius: $border-radius;
@@ -743,7 +752,7 @@ pre {
   background-color: $gray-100;
   border: 1px solid $gray-400;
   border-radius: $border-radius;
-  white-space: pre-line;       /* css-3 */
+  white-space: pre-line; /* css-3 */
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -845,7 +854,7 @@ div.abc-radio label {
   }
 }
 
-.checkbox-dark input[type='checkbox']:checked + label {
+.checkbox-dark input[type="checkbox"]:checked + label {
   &::after {
     color: $gray-600;
   }
@@ -876,7 +885,7 @@ div.abc-radio label {
 }
 
 .mde-preview-content {
-  border-color: rgba(255, 255, 255, .3) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 ///// Toastify /////
@@ -924,10 +933,10 @@ div.abc-radio label {
   }
 }
 
-
 //// Highcharts Width fix ////
-.highcharts-container, .highcharts-root {
-  width:100% !important;
+.highcharts-container,
+.highcharts-root {
+  width: 100% !important;
 }
 
 .breadcrumb > .active {
@@ -935,7 +944,7 @@ div.abc-radio label {
 }
 
 .btn-link {
-  color: $primary
+  color: $primary;
 }
 
 pre code {
@@ -943,9 +952,11 @@ pre code {
 }
 
 .modal {
-  .modal-body, .modal-header, .modal-footer {
+  .modal-body,
+  .modal-header,
+  .modal-footer {
     background: #1b1e3c;
-    color: $content-color
+    color: $content-color;
   }
   .modal-header {
     border-bottom: 1px solid $bg-custom-dark;
@@ -955,7 +966,8 @@ pre code {
   }
 }
 
-.list-group-item.bg-warning-light, .list-group-item.bg-warning-light:hover {
+.list-group-item.bg-warning-light,
+.list-group-item.bg-warning-light:hover {
   color: $gray-700;
 }
 

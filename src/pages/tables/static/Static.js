@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Row,
   Col,
@@ -12,14 +12,13 @@ import {
   Input,
   Label,
   Badge,
-} from 'reactstrap';
-import { Sparklines, SparklinesBars } from 'react-sparklines';
+} from "reactstrap";
+import { Sparklines, SparklinesBars } from "react-sparklines";
 
-import Widget from '../../../components/Widget';
-import s from './Static.module.scss';
+import Widget from "../../../components/Widget";
+import s from "./Static.module.scss";
 
 class Static extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -27,81 +26,81 @@ class Static extends React.Component {
       tableStyles: [
         {
           id: 1,
-          picture: require('../../../images/tables/1.png'), // eslint-disable-line global-require
-          description: 'Palo Alto',
+          picture: require("../../../images/tables/1.png"), // eslint-disable-line global-require
+          description: "Palo Alto",
           info: {
-            type: 'JPEG',
-            dimensions: '200x150',
+            type: "JPEG",
+            dimensions: "200x150",
           },
-          date: new Date('September 14, 2012'),
-          size: '45.6 KB',
+          date: new Date("September 14, 2012"),
+          size: "45.6 KB",
           progress: {
             percent: 29,
-            colorClass: 'success',
+            colorClass: "success",
           },
         },
         {
           id: 2,
-          picture: require('../../../images/tables/2.png'), // eslint-disable-line global-require
-          description: 'The Sky',
+          picture: require("../../../images/tables/2.png"), // eslint-disable-line global-require
+          description: "The Sky",
           info: {
-            type: 'PSD',
-            dimensions: '2400x1455',
+            type: "PSD",
+            dimensions: "2400x1455",
           },
-          date: new Date('November 14, 2012'),
-          size: '15.3 MB',
+          date: new Date("November 14, 2012"),
+          size: "15.3 MB",
           progress: {
             percent: 33,
-            colorClass: 'warning',
+            colorClass: "warning",
           },
         },
         {
           id: 3,
-          picture: require('../../../images/tables/3.png'), // eslint-disable-line global-require
-          description: 'Down the road',
+          picture: require("../../../images/tables/3.png"), // eslint-disable-line global-require
+          description: "Down the road",
           label: {
-            colorClass: 'primary',
-            text: 'INFO!',
+            colorClass: "primary",
+            text: "INFO!",
           },
           info: {
-            type: 'JPEG',
-            dimensions: '200x150',
+            type: "JPEG",
+            dimensions: "200x150",
           },
-          date: new Date('September 14, 2012'),
-          size: '49.0 KB',
+          date: new Date("September 14, 2012"),
+          size: "49.0 KB",
           progress: {
             percent: 38,
-            colorClass: 'inverse',
+            colorClass: "inverse",
           },
         },
         {
           id: 4,
-          picture: require('../../../images/tables/4.png'), // eslint-disable-line global-require
-          description: 'The Edge',
+          picture: require("../../../images/tables/4.png"), // eslint-disable-line global-require
+          description: "The Edge",
           info: {
-            type: 'PNG',
-            dimensions: '210x160',
+            type: "PNG",
+            dimensions: "210x160",
           },
-          date: new Date('September 15, 2012'),
-          size: '69.1 KB',
+          date: new Date("September 15, 2012"),
+          size: "69.1 KB",
           progress: {
             percent: 17,
-            colorClass: 'danger',
+            colorClass: "danger",
           },
         },
         {
           id: 5,
-          picture: require('../../../images/tables/5.png'), // eslint-disable-line global-require
-          description: 'Fortress',
+          picture: require("../../../images/tables/5.png"), // eslint-disable-line global-require
+          description: "Fortress",
           info: {
-            type: 'JPEG',
-            dimensions: '1452x1320',
+            type: "JPEG",
+            dimensions: "1452x1320",
           },
-          date: new Date('October 1, 2012'),
-          size: '2.3 MB',
+          date: new Date("October 1, 2012"),
+          size: "2.3 MB",
           progress: {
             percent: 41,
-            colorClass: 'primary',
+            colorClass: "primary",
           },
         },
       ],
@@ -114,13 +113,17 @@ class Static extends React.Component {
   }
 
   parseDate(date) {
-    this.dateSet = date.toDateString().split(' ');
+    this.dateSet = date.toDateString().split(" ");
 
-    return `${date.toLocaleString('en-us', { month: 'long' })} ${this.dateSet[2]}, ${this.dateSet[3]}`;
+    return `${date.toLocaleString("en-us", { month: "long" })} ${
+      this.dateSet[2]
+    }, ${this.dateSet[3]}`;
   }
 
   checkAll(ev, checkbox) {
-    const checkboxArr = (new Array(this.state[checkbox].length)).fill(ev.target.checked);
+    const checkboxArr = new Array(this.state[checkbox].length).fill(
+      ev.target.checked
+    );
     this.setState({
       [checkbox]: checkboxArr,
     });
@@ -141,13 +144,19 @@ class Static extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <h2 className="page-title">Tables - <span className="fw-semi-bold">Static</span></h2>
+        <h2 className="page-title">
+          Tables - <span className="fw-semi-bold">Static</span>
+        </h2>
         <Row>
           <Col>
             <Widget
-              title={<h5>
-                Table <span className="fw-semi-bold">Styles</span>
-              </h5>} settings close
+              title={
+                <h5>
+                  Table <span className="fw-semi-bold">Styles</span>
+                </h5>
+              }
+              settings
+              close
               bodyClass={s.mainTableWidget}
             >
               <Table striped>
@@ -163,57 +172,72 @@ class Static extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {
-                  this.state.tableStyles.map(row =>
+                  {this.state.tableStyles.map((row) => (
                     <tr key={row.id}>
                       <td>{row.id}</td>
                       <td>
-                        <img className="img-rounded" src={row.picture} alt="" height="50" />
+                        <img
+                          className="img-rounded"
+                          src={row.picture}
+                          alt=""
+                          height="50"
+                        />
                       </td>
                       <td>
                         {row.description}
-                        {row.label &&
-                        <div>
-                          <Badge color={row.label.colorClass}>{row.label.text}</Badge>
-                        </div>
-                        }
+                        {row.label && (
+                          <div>
+                            <Badge color={row.label.colorClass}>
+                              {row.label.text}
+                            </Badge>
+                          </div>
+                        )}
                       </td>
                       <td>
                         <p className="mb-0">
                           <small>
                             Type:
-                            <span className="text-muted fw-semi-bold">&nbsp; {row.info.type}</span>
+                            <span className="text-muted fw-semi-bold">
+                              &nbsp; {row.info.type}
+                            </span>
                           </small>
                         </p>
                         <p>
                           <small>
                             Dimensions:
-                            <span className="text-muted fw-semi-bold">&nbsp; {row.info.dimensions}</span>
+                            <span className="text-muted fw-semi-bold">
+                              &nbsp; {row.info.dimensions}
+                            </span>
                           </small>
                         </p>
                       </td>
-                      <td className="text-muted">
-                        {this.parseDate(row.date)}
-                      </td>
-                      <td className="text-muted">
-                        {row.size}
-                      </td>
+                      <td className="text-muted">{this.parseDate(row.date)}</td>
+                      <td className="text-muted">{row.size}</td>
                       <td className="width-150">
                         <Progress
-                          color={row.progress.colorClass} value={row.progress.percent}
+                          color={row.progress.colorClass}
+                          value={row.progress.percent}
                           className="progress-sm mb-xs"
                         />
                       </td>
-                    </tr>,
-                  )
-                }
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
               <div className="clearfix">
                 <div className="float-right">
-                  <Button color="default" className="mr-xs" size="sm">Send to...</Button>
+                  <Button color="default" className="mr-2" size="sm">
+                    Send to...
+                  </Button>
                   <UncontrolledButtonDropdown>
-                    <DropdownToggle color="inverse" className="mr-xs" size="sm" caret>Clear</DropdownToggle>
+                    <DropdownToggle
+                      color="inverse"
+                      className="mr-xs"
+                      size="sm"
+                      caret
+                    >
+                      Clear
+                    </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem>Clear</DropdownItem>
                       <DropdownItem>Move ...</DropdownItem>
@@ -231,19 +255,34 @@ class Static extends React.Component {
         <Row>
           <Col lg={6}>
             <Widget
-              title={<h5>Table <span className="fw-semi-bold">Styles</span></h5>} settings close
+              title={
+                <h5>
+                  Table <span className="fw-semi-bold">Styles</span>
+                </h5>
+              }
+              settings
+              close
             >
-              <h3>Stripped <span className="fw-semi-bold">Table</span></h3>
+              <h3>
+                Stripped <span className="fw-semi-bold">Table</span>
+              </h3>
 
-              <p>Each row is highlighted. You will never lost there. Just <code>.table-striped</code> it.</p>
+              <p>
+                Each row is highlighted. You will never lost there. Just{" "}
+                <code>.table-striped</code> it.
+              </p>
               <Table className="table-striped">
                 <thead>
                   <tr>
                     <th>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox1" type="checkbox" checked={this.state.checkboxes1[0]}
-                          onChange={event => this.checkAll(event, 'checkboxes1')}
+                          id="checkbox1"
+                          type="checkbox"
+                          checked={this.state.checkboxes1[0]}
+                          onChange={(event) =>
+                            this.checkAll(event, "checkboxes1")
+                          }
                         />
                         <Label for="checkbox1" />
                       </div>
@@ -258,49 +297,80 @@ class Static extends React.Component {
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox2" type="checkbox" checked={this.state.checkboxes1[1]}
-                          onChange={event => this.changeCheck(event, 'checkboxes1', 1)}
+                          id="checkbox2"
+                          type="checkbox"
+                          checked={this.state.checkboxes1[1]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes1", 1)
+                          }
                         />
                         <Label for="checkbox2" />
                       </div>
                     </td>
                     <td>Mark</td>
                     <td>Otto</td>
-                    <td><Badge color="danger">Online</Badge></td>
+                    <td>
+                      <Badge color="danger">Online</Badge>
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox3" type="checkbox" checked={this.state.checkboxes1[2]}
-                          onChange={event => this.changeCheck(event, 'checkboxes1', 2)}
+                          id="checkbox3"
+                          type="checkbox"
+                          checked={this.state.checkboxes1[2]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes1", 2)
+                          }
                         />
                         <Label for="checkbox3" />
                       </div>
                     </td>
-                    <td>Jacob <Badge color="warning" className="text-gray-dark">ALERT!</Badge></td>
+                    <td>
+                      Jacob{" "}
+                      <Badge color="warning" className="ml-2">
+                        ALERT!
+                      </Badge>
+                    </td>
                     <td>Thornton</td>
-                    <td><span className="badge bg-gray">Away</span></td>
+                    <td>
+                      <span className="text-secondary badge badge-gray">
+                        Away
+                      </span>
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox4" type="checkbox" checked={this.state.checkboxes1[3]}
-                          onChange={event => this.changeCheck(event, 'checkboxes1', 3)}
+                          id="checkbox4"
+                          type="checkbox"
+                          checked={this.state.checkboxes1[3]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes1", 3)
+                          }
                         />
                         <Label for="checkbox4" />
                       </div>
                     </td>
                     <td>Larry</td>
                     <td>the Bird</td>
-                    <td><Badge color="danger">Construct</Badge></td>
+                    <td>
+                      <Badge color="danger">Construct</Badge>
+                    </td>
                   </tr>
                 </tbody>
               </Table>
-              <br /><br />
-              <h3>Hover <span className="fw-semi-bold">Table</span></h3>
-              <p>{'Trace only what\'s really important. '}<code>.table-hover</code> is made for it.</p>
+              <br />
+              <br />
+              <h3>
+                Hover <span className="fw-semi-bold">Table</span>
+              </h3>
+              <p>
+                {"Trace only what's really important. "}
+                <code>.table-hover</code> is made for it.
+              </p>
               <div className="table-responsive">
                 <Table className="table-hover">
                   <thead>
@@ -318,29 +388,53 @@ class Static extends React.Component {
                       <td>1</td>
                       <td>Mark</td>
                       <td>Otto</td>
-                      <td><a href="#">ottoto@example.com</a></td>
-                      <td><Badge color="gray" className="text-secondary" pill>Pending</Badge></td>
+                      <td>
+                        <a href="#">ottoto@example.com</a>
+                      </td>
+                      <td>
+                        <Badge color="gray" className="text-secondary" pill>
+                          Pending
+                        </Badge>
+                      </td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Jacob</td>
                       <td>Thornton</td>
-                      <td><a href="#">fat.thor@example.com</a></td>
-                      <td><Badge color="gray" className="text-secondary" pill>Unconfirmed</Badge></td>
+                      <td>
+                        <a href="#">fat.thor@example.com</a>
+                      </td>
+                      <td>
+                        <Badge color="gray" className="text-secondary" pill>
+                          Unconfirmed
+                        </Badge>
+                      </td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Larry</td>
                       <td>the Bird</td>
-                      <td><a href="#">larry@example.com</a></td>
-                      <td><Badge color="primary" className="text-secondary" pill>New</Badge></td>
+                      <td>
+                        <a href="#">larry@example.com</a>
+                      </td>
+                      <td>
+                        <Badge color="primary" className="text-secondary" pill>
+                          New
+                        </Badge>
+                      </td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Peter</td>
                       <td>Horadnia</td>
-                      <td><a href="#">peter@example.com</a></td>
-                      <td><Badge color="success" className="text-secondary" pill>Active</Badge></td>
+                      <td>
+                        <a href="#">peter@example.com</a>
+                      </td>
+                      <td>
+                        <Badge color="success" className="text-secondary" pill>
+                          Active
+                        </Badge>
+                      </td>
                     </tr>
                   </tbody>
                   {/* eslint-enable */}
@@ -350,20 +444,35 @@ class Static extends React.Component {
           </Col>
           <Col lg={6}>
             <Widget
-              title={<h5>Table <span className="fw-semi-bold">Styles</span></h5>} settings close
+              title={
+                <h5>
+                  Table <span className="fw-semi-bold">Styles</span>
+                </h5>
+              }
+              settings
+              close
             >
-              <h3>Bordered <span className="fw-semi-bold">Table</span></h3>
-              <p>Each row is highlighted. You will never lost there. That&apos;s how
-                all of us learned in school the table should look like. Just add
-                <code>.table-bordered</code> to it.</p>
+              <h3>
+                Bordered <span className="fw-semi-bold">Table</span>
+              </h3>
+              <p>
+                Each row is highlighted. You will never lost there. That&apos;s
+                how all of us learned in school the table should look like. Just
+                add
+                <code>.table-bordered</code> to it.
+              </p>
               <Table className="table-bordered table-lg mt-lg mb-0">
                 <thead className="text-uppercase">
                   <tr>
                     <th>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox10" type="checkbox" checked={this.state.checkboxes2[0]}
-                          onChange={event => this.checkAll(event, 'checkboxes2')}
+                          id="checkbox10"
+                          type="checkbox"
+                          checked={this.state.checkboxes2[0]}
+                          onChange={(event) =>
+                            this.checkAll(event, "checkboxes2")
+                          }
                         />
                         <Label for="checkbox10" />
                       </div>
@@ -378,8 +487,12 @@ class Static extends React.Component {
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox11" type="checkbox" checked={this.state.checkboxes2[1]}
-                          onChange={event => this.changeCheck(event, 'checkboxes2', 1)}
+                          id="checkbox11"
+                          type="checkbox"
+                          checked={this.state.checkboxes2[1]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes2", 1)
+                          }
                         />
                         <Label for="checkbox11" />
                       </div>
@@ -387,8 +500,11 @@ class Static extends React.Component {
                     <td>On the Road</td>
                     <td className="text-right">$25 224.2</td>
                     <td className="text-center">
-                      <Sparklines data={[13, 14, 16, 15, 4, 14, 20]} style={{ width: '35px', height: '20px' }}>
-                        <SparklinesBars style={{ stroke: 'white', fill: '#1870DC' }} />
+                      <Sparklines
+                        data={[13, 14, 16, 15, 4, 14, 20]}
+                        style={{ width: "35px", height: "20px" }}
+                      >
+                        <SparklinesBars style={{ fill: "#1870DC" }} />
                       </Sparklines>
                     </td>
                   </tr>
@@ -396,8 +512,12 @@ class Static extends React.Component {
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox12" type="checkbox" checked={this.state.checkboxes2[2]}
-                          onChange={event => this.changeCheck(event, 'checkboxes2', 2)}
+                          id="checkbox12"
+                          type="checkbox"
+                          checked={this.state.checkboxes2[2]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes2", 2)
+                          }
                         />
                         <Label for="checkbox12" />
                       </div>
@@ -405,8 +525,11 @@ class Static extends React.Component {
                     <td>HP Core i7</td>
                     <td className="text-right">$87 346.1</td>
                     <td className="text-center">
-                      <Sparklines data={[14, 12, 16, 11, 17, 19, 16]} style={{ width: '35px', height: '20px' }}>
-                        <SparklinesBars style={{ stroke: 'white', fill: '#58D777' }} />
+                      <Sparklines
+                        data={[14, 12, 16, 11, 17, 19, 16]}
+                        style={{ width: "35px", height: "20px" }}
+                      >
+                        <SparklinesBars style={{ fill: "#58D777" }} />
                       </Sparklines>
                     </td>
                   </tr>
@@ -414,8 +537,12 @@ class Static extends React.Component {
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox13" type="checkbox" checked={this.state.checkboxes2[3]}
-                          onChange={event => this.changeCheck(event, 'checkboxes2', 3)}
+                          id="checkbox13"
+                          type="checkbox"
+                          checked={this.state.checkboxes2[3]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes2", 3)
+                          }
                         />
                         <Label for="checkbox13" />
                       </div>
@@ -423,8 +550,11 @@ class Static extends React.Component {
                     <td>Let&apos;s Dance</td>
                     <td className="text-right">$57 944.6</td>
                     <td className="text-center">
-                      <Sparklines data={[11, 17, 19, 16, 14, 12, 16]} style={{ width: '35px', height: '20px' }}>
-                        <SparklinesBars style={{ stroke: 'white', fill: '#f0af03' }} />
+                      <Sparklines
+                        data={[11, 17, 19, 16, 14, 12, 16]}
+                        style={{ width: "35px", height: "20px" }}
+                      >
+                        <SparklinesBars style={{ fill: "#f0af03" }} />
                       </Sparklines>
                     </td>
                   </tr>
@@ -432,8 +562,12 @@ class Static extends React.Component {
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox14" type="checkbox" checked={this.state.checkboxes2[4]}
-                          onChange={event => this.changeCheck(event, 'checkboxes2', 4)}
+                          id="checkbox14"
+                          type="checkbox"
+                          checked={this.state.checkboxes2[4]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes2", 4)
+                          }
                         />
                         <Label for="checkbox14" />
                       </div>
@@ -441,8 +575,11 @@ class Static extends React.Component {
                     <td>Air Pro</td>
                     <td className="text-right">$118 533.1</td>
                     <td className="text-center">
-                      <Sparklines data={[13, 14, 20, 16, 15, 4, 14]} style={{ width: '35px', height: '20px' }}>
-                        <SparklinesBars style={{ stroke: 'white', fill: '#F45722' }} />
+                      <Sparklines
+                        data={[13, 14, 20, 16, 15, 4, 14]}
+                        style={{ width: "35px", height: "20px" }}
+                      >
+                        <SparklinesBars style={{ fill: "#F45722" }} />
                       </Sparklines>
                     </td>
                   </tr>
@@ -450,8 +587,12 @@ class Static extends React.Component {
                     <td>
                       <div className="abc-checkbox">
                         <Input
-                          id="checkbox15" type="checkbox" checked={this.state.checkboxes2[5]}
-                          onChange={event => this.changeCheck(event, 'checkboxes2', 5)}
+                          id="checkbox15"
+                          type="checkbox"
+                          checked={this.state.checkboxes2[5]}
+                          onChange={(event) =>
+                            this.changeCheck(event, "checkboxes2", 5)
+                          }
                         />
                         <Label for="checkbox15" />
                       </div>
@@ -459,8 +600,11 @@ class Static extends React.Component {
                     <td>Version Control</td>
                     <td className="text-right">$72 854.5</td>
                     <td className="text-center">
-                      <Sparklines data={[16, 15, 4, 14, 13, 14, 20]} style={{ width: '35px', height: '20px' }}>
-                        <SparklinesBars style={{ stroke: 'white', fill: '#4ebfbb' }} />
+                      <Sparklines
+                        data={[16, 15, 4, 14, 13, 14, 20]}
+                        style={{ width: "35px", height: "20px" }}
+                      >
+                        <SparklinesBars style={{ fill: "#4ebfbb" }} />
                       </Sparklines>
                     </td>
                   </tr>
@@ -468,14 +612,22 @@ class Static extends React.Component {
               </Table>
             </Widget>
             <Widget
-              title={<h5>Table <span className="fw-semi-bold">Styles</span></h5>} settings close
+              title={
+                <h5>
+                  Table <span className="fw-semi-bold">Styles</span>
+                </h5>
+              }
+              settings
+              close
             >
-              <h3>Overflow <span className="fw-semi-bold">Table</span></h3>
+              <h3>
+                Overflow <span className="fw-semi-bold">Table</span>
+              </h3>
               <p>
-                Add any non-bordered .table within a widget for a seamless design.
-                Awesome look for no cost.
-                Just wrap the table with simple css class <code>.widget-table-overflow</code> inside
-                of widget
+                Add any non-bordered .table within a widget for a seamless
+                design. Awesome look for no cost. Just wrap the table with
+                simple css class <code>.widget-table-overflow</code> inside of
+                widget
               </p>
               <div className="widget-table-overflow">
                 <Table className="table-striped table-lg mt-lg mb-0">
@@ -484,8 +636,12 @@ class Static extends React.Component {
                       <th>
                         <div className="abc-checkbox">
                           <Input
-                            id="checkbox20" type="checkbox" checked={this.state.checkboxes3[0]}
-                            onChange={event => this.checkAll(event, 'checkboxes3')}
+                            id="checkbox20"
+                            type="checkbox"
+                            checked={this.state.checkboxes3[0]}
+                            onChange={(event) =>
+                              this.checkAll(event, "checkboxes3")
+                            }
                           />
                           <Label for="checkbox20" />
                         </div>
@@ -500,8 +656,12 @@ class Static extends React.Component {
                       <td>
                         <div className="abc-checkbox">
                           <Input
-                            id="checkbox21" type="checkbox" checked={this.state.checkboxes3[1]}
-                            onChange={event => this.changeCheck(event, 'checkboxes3', 1)}
+                            id="checkbox21"
+                            type="checkbox"
+                            checked={this.state.checkboxes3[1]}
+                            onChange={(event) =>
+                              this.changeCheck(event, "checkboxes3", 1)
+                            }
                           />
                           <Label for="checkbox21" />
                         </div>
@@ -509,8 +669,11 @@ class Static extends React.Component {
                       <td>On the Road</td>
                       <td className="text-right">$25 224.2</td>
                       <td className="text-center">
-                        <Sparklines data={[13, 14, 16, 15, 4, 14, 20]} style={{ width: '35px', height: '20px' }}>
-                          <SparklinesBars style={{ stroke: 'white', fill: '#1870DC' }} />
+                        <Sparklines
+                          data={[13, 14, 16, 15, 4, 14, 20]}
+                          style={{ width: "35px", height: "20px" }}
+                        >
+                          <SparklinesBars style={{ fill: "#1870DC" }} />
                         </Sparklines>
                       </td>
                     </tr>
@@ -518,8 +681,12 @@ class Static extends React.Component {
                       <td>
                         <div className="abc-checkbox">
                           <Input
-                            id="checkbox22" type="checkbox" checked={this.state.checkboxes3[2]}
-                            onChange={event => this.changeCheck(event, 'checkboxes3', 2)}
+                            id="checkbox22"
+                            type="checkbox"
+                            checked={this.state.checkboxes3[2]}
+                            onChange={(event) =>
+                              this.changeCheck(event, "checkboxes3", 2)
+                            }
                           />
                           <Label for="checkbox22" />
                         </div>
@@ -527,8 +694,11 @@ class Static extends React.Component {
                       <td>HP Core i7</td>
                       <td className="text-right">$87 346.1</td>
                       <td className="text-center">
-                        <Sparklines data={[14, 12, 16, 11, 17, 19, 16]} style={{ width: '35px', height: '20px' }}>
-                          <SparklinesBars style={{ stroke: 'white', fill: '#F45722' }} />
+                        <Sparklines
+                          data={[14, 12, 16, 11, 17, 19, 16]}
+                          style={{ width: "35px", height: "20px" }}
+                        >
+                          <SparklinesBars style={{ fill: "#F45722" }} />
                         </Sparklines>
                       </td>
                     </tr>
@@ -536,8 +706,12 @@ class Static extends React.Component {
                       <td>
                         <div className="abc-checkbox">
                           <Input
-                            id="checkbox23" type="checkbox" checked={this.state.checkboxes3[3]}
-                            onChange={event => this.changeCheck(event, 'checkboxes3', 3)}
+                            id="checkbox23"
+                            type="checkbox"
+                            checked={this.state.checkboxes3[3]}
+                            onChange={(event) =>
+                              this.changeCheck(event, "checkboxes3", 3)
+                            }
                           />
                           <Label for="checkbox23" />
                         </div>
@@ -545,8 +719,11 @@ class Static extends React.Component {
                       <td>Let&apos;s Dance</td>
                       <td className="text-right">$57 944.6</td>
                       <td className="text-center">
-                        <Sparklines data={[11, 17, 19, 16, 14, 12, 16]} style={{ width: '35px', height: '20px' }}>
-                          <SparklinesBars style={{ stroke: 'white', fill: '#f0af03' }} />
+                        <Sparklines
+                          data={[11, 17, 19, 16, 14, 12, 16]}
+                          style={{ width: "35px", height: "20px" }}
+                        >
+                          <SparklinesBars style={{ fill: "#f0af03" }} />
                         </Sparklines>
                       </td>
                     </tr>
@@ -554,8 +731,12 @@ class Static extends React.Component {
                       <td>
                         <div className="abc-checkbox">
                           <Input
-                            id="checkbox24" type="checkbox" checked={this.state.checkboxes3[4]}
-                            onChange={event => this.changeCheck(event, 'checkboxes3', 4)}
+                            id="checkbox24"
+                            type="checkbox"
+                            checked={this.state.checkboxes3[4]}
+                            onChange={(event) =>
+                              this.changeCheck(event, "checkboxes3", 4)
+                            }
                           />
                           <Label for="checkbox24" />
                         </div>
@@ -563,8 +744,11 @@ class Static extends React.Component {
                       <td>Air Pro</td>
                       <td className="text-right">$118 533.1</td>
                       <td className="text-center">
-                        <Sparklines data={[13, 14, 20, 16, 15, 4, 14]} style={{ width: '35px', height: '20px' }}>
-                          <SparklinesBars style={{ stroke: 'white', fill: '#58D777' }} />
+                        <Sparklines
+                          data={[13, 14, 20, 16, 15, 4, 14]}
+                          style={{ width: "35px", height: "20px" }}
+                        >
+                          <SparklinesBars style={{ fill: "#58D777" }} />
                         </Sparklines>
                       </td>
                     </tr>
@@ -572,8 +756,12 @@ class Static extends React.Component {
                       <td>
                         <div className="abc-checkbox">
                           <Input
-                            id="checkbox25" type="checkbox" checked={this.state.checkboxes3[5]}
-                            onChange={event => this.changeCheck(event, 'checkboxes3', 5)}
+                            id="checkbox25"
+                            type="checkbox"
+                            checked={this.state.checkboxes3[5]}
+                            onChange={(event) =>
+                              this.changeCheck(event, "checkboxes3", 5)
+                            }
                           />
                           <Label for="checkbox25" />
                         </div>
@@ -581,8 +769,11 @@ class Static extends React.Component {
                       <td>Version Control</td>
                       <td className="text-right">$72 854.5</td>
                       <td className="text-center">
-                        <Sparklines data={[16, 15, 4, 14, 13, 14, 20]} style={{ width: '35px', height: '20px' }}>
-                          <SparklinesBars style={{ stroke: 'white', fill: '#4ebfbb' }} />
+                        <Sparklines
+                          data={[16, 15, 4, 14, 13, 14, 20]}
+                          style={{ width: "35px", height: "20px" }}
+                        >
+                          <SparklinesBars style={{ fill: "#4ebfbb" }} />
                         </Sparklines>
                       </td>
                     </tr>
@@ -595,7 +786,6 @@ class Static extends React.Component {
       </div>
     );
   }
-
 }
 
 export default Static;
