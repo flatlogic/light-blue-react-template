@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.4]
+
+- Added link to flatlogic on login and register pages
+
 ## [1.2.3]
 
 - Fix layout issues
