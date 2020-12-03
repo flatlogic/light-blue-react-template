@@ -35,10 +35,10 @@ const Typography = () => (
               <Col sm={6}>
                 <h1 className="text-danger">h1. Heading</h1>
                 <h2 className="text-warning">h2. Heading</h2>
-                <h3 className="text-success">h3. Heading</h3>
-                <h4 className="text-primary">h4. Heading</h4>
-                <h5 className="text-info">h5. Heading</h5>
-                <h6 className="text-inverse">h6. Heading</h6>
+                <h3 className="text-lime">h3. Heading</h3>
+                <h4 className="text-success">h4. Heading</h4>
+                <h5 className="text-primary">h5. Heading</h5>
+                <h6 className="text-info">h6. Heading</h6>
               </Col>
             </Row>
           </div>
@@ -51,7 +51,7 @@ const Typography = () => (
           </div>
           <h4 className="mt-5">Display</h4>
           <p>Headings to stand out</p>
-          <div className="widget-padding-md w-100 h-100 text-left border rounded">
+          <div className="widget-padding-md w-100 h-100 text-left border rounded overflow-auto">
             <h1 className="display-1">Display 1</h1>
             <h1 className="display-2">Display 2</h1>
             <h1 className="display-3">Display 3</h1>

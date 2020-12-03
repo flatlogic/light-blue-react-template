@@ -225,7 +225,7 @@ class Header extends React.Component {
             isOpen={this.state.messagesOpen}
             toggle={this.toggleMessagesDropdown}
           >
-            <DropdownToggle nav className={`${s.navItem}`}>
+            <DropdownToggle nav className={`${s.navItem} text-white`}>
               <i className="glyphicon glyphicon-comments" />
             </DropdownToggle>
             <DropdownMenu className={`${s.dropdownMenu} ${s.messages}`}>
@@ -269,7 +269,7 @@ class Header extends React.Component {
             isOpen={this.state.settingsOpen}
             toggle={this.toggleSettingsDropdown}
           >
-            <DropdownToggle nav className={`${s.navItem} `}>
+            <DropdownToggle nav className={`${s.navItem} text-white`}>
               <i className="glyphicon glyphicon-cog" />
             </DropdownToggle>
             <DropdownMenu className={`${s.dropdownMenu} ${s.settings}`}>
@@ -323,7 +323,7 @@ class Header extends React.Component {
             isOpen={this.state.supportOpen}
             toggle={this.toggleSupportDropdown}
           >
-            <DropdownToggle nav className={`${s.navItem}`}>
+            <DropdownToggle nav className={`${s.navItem} text-white`}>
               <i className="glyphicon glyphicon-globe" />
               <span className={s.count}>8</span>
             </DropdownToggle>
@@ -373,7 +373,7 @@ class Header extends React.Component {
           <NavItem>
             <NavLink
               onClick={this.doLogout}
-              className={`${s.navItem} `}
+              className={`${s.navItem} text-white`}
               href="#"
             >
               <i className="glyphicon glyphicon-off" />

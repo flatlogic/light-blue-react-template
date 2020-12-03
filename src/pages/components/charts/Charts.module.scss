@@ -72,8 +72,18 @@
     }
 
     /* Apex Chart */
+    .apexcharts-menu {
+      background: $main-gradient;
+      box-shadow: 0 0px 40px 2px rgba(#020202,.5);
+      border: none;
+    }
+
     .apexcharts-menu-item {
-      color: black;
+      color: $gray-200;
+      &:hover {
+        background: $subtle-blue;
+        color: $gray-200;
+      }
     }
   }
 }

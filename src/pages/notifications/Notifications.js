@@ -154,7 +154,7 @@ class Notifications extends React.Component {
                 Different types of notifications for lost of use cases. Custom
                 classes are also supported.
               </p>
-              <p>
+              <p className="mb-2">
                 <Button
                   color="info"
                   id="show-info-message"
@@ -163,7 +163,7 @@ class Notifications extends React.Component {
                   Info Message
                 </Button>
               </p>
-              <p>
+              <p className="mb-2">
                 <Button
                   color="danger"
                   id="show-error-message"

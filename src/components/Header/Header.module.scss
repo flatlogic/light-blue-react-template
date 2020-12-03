@@ -197,6 +197,10 @@
   :global(.show) > & {
     display: block;
   }
+
+  button:hover {
+    background-color: $widget-bg;
+  }
 }
 
 .messages {

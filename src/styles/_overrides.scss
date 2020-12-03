@@ -29,17 +29,6 @@
     }
   }
 
-  &.main-navbar {
-    .nav {
-      li a {
-        color: $content-color;
-      }
-      li {
-        color: $content-color;
-      }
-    }
-  }
-
   .nav-item {
     .nav-link {
       display: flex;
@@ -184,10 +173,6 @@ legend {
 }
 
 .badge {
-  &.badge-pill {
-    padding: 0.4em 0.6em;
-  }
-
   .list-group-item > & {
     margin-top: 2px;
   }
@@ -255,7 +240,7 @@ small {
 .btn.btn-info,
 .btn.btn-warning,
 .btn.btn-danger {
-  color: $violet_deep;
+  color: $white;
 }
 
 .dropdown-toggle::after {
@@ -971,6 +956,3 @@ pre code {
   color: $gray-700;
 }
 
-.list-group-item .deemphasize {
-  color: $gray-600;
-}

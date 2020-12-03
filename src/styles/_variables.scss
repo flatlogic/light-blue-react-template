@@ -46,7 +46,7 @@ $main-gradient: radial-gradient(
 );
 
 $lime: #8cbf26 !default;
-$red: #f45722 !default;
+$red: #db2a34 !default;
 $red-dark: #d04f4f !default;
 $blue: #2477ff !default;
 $green: #2d8515 !default;
@@ -70,6 +70,7 @@ $theme-colors: (
   dark: $gray-700,
   inverse: $inverse,
   gray: $gray,
+  lime: $lime,
   light: $gray-100,
   default: $subtle-blue,
   primary-light: #dee4ee,

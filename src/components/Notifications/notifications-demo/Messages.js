@@ -16,7 +16,7 @@ class MessagesDemo extends React.Component {
   render() {
     return (
       <ListGroup className={[s.listGroup, 'thin-scroll'].join(' ')}>
-        <ListGroupItem className={[s.listGroupItem, 'bg-warning-light'].join(' ')}>
+        <ListGroupItem className={[s.listGroupItem].join(' ')}>
           <span className={[s.notificationIcon, 'thumb-sm'].join(' ')}>
             <img className="rounded-circle" src={a2} alt="..." />
             <i className="status status-bottom bg-success" />

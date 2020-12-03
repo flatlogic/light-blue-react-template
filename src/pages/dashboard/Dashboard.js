@@ -184,7 +184,7 @@ class Dashboard extends React.Component {
         </Row>
 
         <Row>
-          <Col lg={4} xs={12}>
+          <Col lg={6} xl={4} xs={12}>
             <Widget title={<h6> USERBASE GROWTH </h6>} close settings>
               <div className="stats-row">
                 <div className="stat-item">
@@ -216,7 +216,7 @@ class Dashboard extends React.Component {
               </p>
             </Widget>
           </Col>
-          <Col lg={4} xs={12}>
+          <Col lg={6} xl={4} xs={12}>
             <Widget title={<h6> TRAFFIC VALUES </h6>} close settings>
               <div className="stats-row">
                 <div className="stat-item">
@@ -248,7 +248,7 @@ class Dashboard extends React.Component {
               </p>
             </Widget>
           </Col>
-          <Col lg={4} xs={12}>
+          <Col lg={6} xl={4} xs={12}>
             <Widget title={<h6> RANDOM VALUES </h6>} close settings>
               <div className="stats-row">
                 <div className="stat-item">

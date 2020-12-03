@@ -393,6 +393,9 @@ export const chartData = {
               shadowColor: "rgba(0, 0, 0, 0.8)",
             },
           },
+          label: {
+            show: false,
+          },
           data: [
             ["2015/11/08", 10, "DQ"],
             ["2015/11/09", 15, "DQ"],
