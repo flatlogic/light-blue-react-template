@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.5]
+
+- Fix layout issues
+- Correct elements properties
+
 ## [1.2.4]
 
 - Added link to flatlogic on login and register pages
