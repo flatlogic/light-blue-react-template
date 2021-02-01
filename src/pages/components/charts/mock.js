@@ -27,6 +27,16 @@ export const chartData = {
           height: 350,
           type: "bar",
         },
+        legend: {
+          show: true,
+          labels: {
+            colors: colors.textColor,
+          },
+          itemMargin: {
+            horizontal: 10,
+            vertical: 5
+          },
+        },
         colors: columnColors,
         plotOptions: {
           bar: {
