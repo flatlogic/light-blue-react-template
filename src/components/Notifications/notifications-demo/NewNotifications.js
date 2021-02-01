@@ -15,7 +15,7 @@ class NewNotificationsDemo extends React.Component {
   render() {
     return (
       <ListGroup className={[s.listGroup, 'thin-scroll'].join(' ')}>
-        <ListGroupItem className={`${s.listGroupItem} bg-attention`}>
+        <ListGroupItem className={s.listGroupItem}>
           <span className={[s.notificationIcon, 'thumb-sm'].join(' ')}>
             <i className="fa fa-check text-success fa-lg" />
           </span>
@@ -29,12 +29,14 @@ class NewNotificationsDemo extends React.Component {
             </time>
           </p>
         </ListGroupItem>
-        <ListGroupItem className={`${s.listGroupItem} bg-attention`}>
+        <ListGroupItem className={s.listGroupItem}>
           <span className={[s.notificationIcon, 'thumb-sm'].join(' ')}>
             <img className="rounded-circle" src={a6} alt="..." />
           </span>
           <p className="m-0 overflow-hidden">
-            <button className="btn-link">Jeniffer Willington</button>has just endorsed you with 50 points!
+          {/* eslint-disable */}
+          <a href="#">Jeniffer Willington </a>has just endorsed you with 50 points!
+          {/* eslint-enable */}
             <time className="help-block m-0">
               30 sec ago
             </time>
