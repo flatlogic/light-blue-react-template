@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.6]
+
+- Fixed header's notification bar 
+- Fixed charts legend labels
+
 ## [1.2.5]
 
 - Fix layout issues
