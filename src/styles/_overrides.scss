@@ -880,6 +880,7 @@ div.abc-radio label {
     border-radius: $border-radius;
     &.Toastify__toast--success {
       background: $success;
+      justify-content: center;
     }
 
     &.Toastify__toast--warn {
@@ -888,10 +889,16 @@ div.abc-radio label {
 
     &.Toastify__toast--error {
       background: $danger;
+      justify-content: center;
     }
 
     &.Toastify__toast--info {
       background: $info;
+    }
+
+    &.Toastify__toast--primary {
+      background: $primary;
+      justify-content: center;
     }
 
     &-body {

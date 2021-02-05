@@ -45,7 +45,7 @@ class Notifications extends React.Component {
 
   addInfoNotification = () => {
     let id = uuid();
-    toast.info(
+    toast(
       <div>
         Launching thermonuclear war...
         <Button
@@ -57,7 +57,11 @@ class Notifications extends React.Component {
           Cancel launch
         </Button>
       </div>,
-      { ...this.state.options, toastId: id }
+      { 
+        ...this.state.options,
+        className: "Toastify__toast--primary",
+        toastId: id
+        }
     );
   };
 
@@ -154,16 +158,16 @@ class Notifications extends React.Component {
                 Different types of notifications for lost of use cases. Custom
                 classes are also supported.
               </p>
-              <p className="mb-2">
+              <p className="mb-3">
                 <Button
-                  color="info"
+                  color="primary"
                   id="show-info-message"
                   onClick={this.addInfoNotification}
                 >
                   Info Message
                 </Button>
               </p>
-              <p className="mb-2">
+              <p className="mb-3">
                 <Button
                   color="danger"
                   id="show-error-message"
