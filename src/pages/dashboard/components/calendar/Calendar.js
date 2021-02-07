@@ -27,7 +27,7 @@ class Calendar extends Component {
         {
           title: "Light Blue Template 1.0.0 release",
           info: "Some contents here",
-          itemStyle: "#58d777",
+          itemStyle: "#2d8515",
           date: moment(`${moment().year()}-${moment().month()+1}-18`, "YYYY-MM-DD"),
         },
         {
