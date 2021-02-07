@@ -103,7 +103,7 @@ class Dashboard extends React.Component {
                   <Progress
                     color="primary"
                     value="60"
-                    className="bg-custom-dark progress-xs"
+                    className="bg-subtle-blue progress-xs"
                   />
                 </div>
                 <div className="col-md-3 col-12 text-center">
@@ -123,7 +123,7 @@ class Dashboard extends React.Component {
                   <Progress
                     color="danger"
                     value="39"
-                    className="bg-custom-dark progress-xs"
+                    className="bg-subtle-blue progress-xs"
                   />
                 </div>
                 <div className="col-md-3 col-12 text-center">
@@ -143,7 +143,7 @@ class Dashboard extends React.Component {
                   <Progress
                     color="success"
                     value="80"
-                    className="bg-custom-dark progress-xs"
+                    className="bg-subtle-blue progress-xs"
                   />
                 </div>
                 <div className="col-md-3 col-12 text-center">
@@ -203,7 +203,7 @@ class Dashboard extends React.Component {
               <Progress
                 color="success"
                 value="60"
-                className="bg-custom-dark progress-xs"
+                className="bg-subtle-blue progress-xs"
               />
               <p>
                 <small>
@@ -235,7 +235,7 @@ class Dashboard extends React.Component {
               <Progress
                 color="danger"
                 value="60"
-                className="bg-custom-dark progress-xs"
+                className="bg-subtle-blue progress-xs"
               />
               <p>
                 <small>
@@ -267,7 +267,7 @@ class Dashboard extends React.Component {
               <Progress
                 color="bg-primary"
                 value="60"
-                className="bg-custom-dark progress-xs"
+                className="bg-subtle-blue progress-xs"
               />
               <p>
                 <small>
@@ -334,7 +334,7 @@ class Dashboard extends React.Component {
                         src={peopleA1}
                         alt="..."
                       />
-                      <i className="status status-bottom bg-default" />
+                      <i className="status status-bottom bg-primary" />
                     </span>
                     <div>
                       <h6 className="m-0">Livia Walsh</h6>

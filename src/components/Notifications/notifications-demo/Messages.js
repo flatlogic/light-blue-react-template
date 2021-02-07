@@ -55,7 +55,7 @@ class MessagesDemo extends React.Component {
         <ListGroupItem className={s.listGroupItem}>
           <span className={[s.notificationIcon, 'thumb-sm'].join(' ')}>
             <img className="rounded-circle" src={a4} alt="..." />
-            <i className="status status-bottom bg-gray-light" />
+            <i className="status status-bottom bg-primary" />
           </span>
           <time className="text-link help float-right">Yesterday</time>
           <h6 className="m-0 mb-1">Mike Lewis</h6>
