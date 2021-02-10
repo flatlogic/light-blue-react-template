@@ -512,6 +512,12 @@ small {
   vertical-align: middle;
 }
 
+i {
+  &.glyphicon {
+    color: #3979F6;
+  }
+}
+
 ///////// Font Awesome //////////
 
 .navbar {

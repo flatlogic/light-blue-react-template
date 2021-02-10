@@ -7,8 +7,8 @@ import {
 
 import s from './ListGroup.module.scss';
 
-import a3 from '../../../images/people/a3.jpg';
-import a5 from '../../../images/people/a5.jpg';
+import a3 from '../../../assets/people/a3.jpg';
+import a5 from '../../../assets/people/a5.jpg';
 
 class NotificationsDemo extends React.Component {
   render() {

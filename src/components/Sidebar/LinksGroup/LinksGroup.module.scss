@@ -8,9 +8,11 @@
   }
 
   a {
-    font-size: 13px;
-    display: block;
-    color: $sidebar-color;
+    font-size: 14px;
+    font-weight: $font-weight-normal;
+    display: flex;
+    justify-content: left;
+    color: $white;
     text-decoration: none;
     cursor: pointer;
 
@@ -38,11 +40,10 @@
   }
 
   .icon {
-    margin-right: 0.5rem;
-    max-height: 20px;
-    max-width: 14px;
+    margin-right: .5rem;
+    max-height: 32px;
+    max-width: 32px;
     text-align: center;
-    opacity: .6;
   }
 
   .badge {
@@ -59,24 +60,26 @@
 }
 
 .collapsed .caret {
-  transform: rotate(-90deg);
+  transform: rotate(+90deg);
 }
 
 .caret {
   position: absolute;
-  right: 10px;
+  right: 14px;
   display: flex;
   align-items: center;
+  color: $icon-color;
+  font-weight: $font-weight-bold;
 
   @include transition(transform 0.3s ease-in-out);
 }
 
 a.headerLinkActive {
-  font-weight: bold;
+  @include icon-style;
 }
 
 .accordionToggle:focus {
-  background-color: $sidebar-item-hover-bg-color;
+  @include icon-style;
 }
 
 .panel {
@@ -87,13 +90,12 @@ a.headerLinkActive {
   background-color: lighten($sidebar-bg-color, 5%);
 
   a.headerLinkActive {
-    font-weight: $font-weight-bold;
+    font-size: 1rem;
+    font-weight: $font-weight-semi-bold;
     color: $sidebar-color;
   }
 
   ul {
-    background: $sidebar-action-bg;
-    padding: 0.25rem 0;
 
     li {
       list-style: none;
@@ -101,7 +103,8 @@ a.headerLinkActive {
 
     a {
       padding: $sidebar-sub-item-padding;
-      font-size: $font-size-mini;
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
 
       &:hover {
         background-color: $sidebar-item-hover-bg-color;

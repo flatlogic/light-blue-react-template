@@ -75,3 +75,14 @@
     @content;
   }
 }
+
+@mixin icon-style {
+  font-weight: $font-weight-semi-bold;
+  font-size: 16px;
+  span {
+    background-color: $icon-color;
+    rect {
+      fill: #0D2B47;
+    }
+  }
+}
