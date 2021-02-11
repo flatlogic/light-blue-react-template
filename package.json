@@ -64,7 +64,7 @@
     "@amcharts/amcharts4": "^4.9.28",
     "@amcharts/amcharts4-geodata": "^4.1.16",
     "animate.css": "4.1.0",
-    "apexcharts": "^3.19.3",
+    "apexcharts": "^3.24.0",
     "awesome-bootstrap-checkbox": "1.0.1",
     "bootstrap": "4.5.0",
     "classnames": "^2.2.6",
