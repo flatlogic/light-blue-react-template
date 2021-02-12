@@ -24,6 +24,14 @@ import {
   FormGroup,
 } from "reactstrap";
 import Notifications from "../Notifications";
+import PowerIcon from "../Icons/PowerIcon/PowerIcon.js";
+import BellIcon from "../Icons/BellIcon/BellIcon.js";
+import SettingsIcon from "../Icons/SettingsIcon/SettingsIcon.js";
+import MessageIcon from "../Icons/MessageIcon/MessageIcon.js";
+import BurgerIcon from "../Icons/BurgerIcon/BurgerIcon.js";
+import SearchIcon from "../Icons/SearchIcon/SearchIcon.js";
+import SearchIconWhite from "../Icons/SearchIconWhite/SearchIconWhite.js";
+
 import { logoutUser } from "../../actions/user";
 import {
   openSidebar,
@@ -132,19 +140,19 @@ class Header extends React.Component {
     return (
       <Navbar className={`d-print-none main-navbar ${s.root}`}>
         <UncontrolledAlert
-          className={`${s.alert} mr-3 d-lg-down-none animate__animated animate__bounceIn animate__delay-1s`}
+          className={`${s.alert} mr-5 d-lg-down-none animate__animated animate__bounceIn animate__delay-1s`}
         >
-          <i className="fa fa-info-circle mr-1" /> Check out Light Blue{" "}
+          Check out Light Blue{" "}
           <button
             className="btn-link"
             onClick={() => this.setState({ settingsOpen: true })}
           >
-            settings
+            <SettingsIcon className={s.headerIcon} />
           </button>{" "}
           on the right!
         </UncontrolledAlert>
         <Collapse
-          className={`${s.searchCollapse} ml-lg-0 mr-md-3`}
+          className={`${s.searchCollapse} ml-lg-0 mr-md-`}
           isOpen={this.state.searchOpen}
         >
           <InputGroup
@@ -155,6 +163,7 @@ class Header extends React.Component {
             <InputGroupAddon addonType="prepend" className={s.inputAddon}>
               <InputGroupText>
                 <i className="fa fa-search" />
+                {/* <SearchIconWhite /> */}
               </InputGroupText>
             </InputGroupAddon>
             <Input
@@ -171,13 +180,13 @@ class Header extends React.Component {
             <InputGroup className="input-group-no-border">
               <InputGroupAddon addonType="prepend">
                 <InputGroupText>
-                  <i className="fa fa-search text-white" />
+                  <SearchIconWhite />
                 </InputGroupText>
               </InputGroupAddon>
               <Input
                 id="search-input"
                 className="input-transparent"
-                placeholder="Search"
+                placeholder="Search Dashboard"
               />
             </InputGroup>
           </FormGroup>
@@ -190,17 +199,17 @@ class Header extends React.Component {
             toggle={this.toggleNotifications}
             id="basic-nav-dropdown"
             className={`${s.notificationsMenu}`}
-            style={{ marginRight: "auto" }}
+            style={{ marginRight: '1.5rem' }}
           >
-            <DropdownToggle nav caret style={{ color: "#f4f4f5", padding: 0 }}>
+            <DropdownToggle nav caret style={{ color: "#3979F6", padding: 0 }}>
               <span
-                className={`${s.avatar} rounded-circle thumb-sm float-left mr-2`}
+                className={`${s.avatar} rounded-circle thumb-sm float-left`}
               >
                 <img src={avatar} alt="..." />
               </span>
-              <span className={`small ${s.accountCheck}`}>Philip smith</span>
-              <Badge className={s.badge} color="primary">
-                13
+              <span className={`${s.accountCheck}`}>Philip smith</span>
+              <Badge className={s.badge} color="danger">
+                9
               </Badge>
             </DropdownToggle>
             <DropdownMenu
@@ -216,7 +225,7 @@ class Header extends React.Component {
               className={s.navItem}
               href="#"
             >
-              <i className="glyphicon glyphicon-search" />
+              <SearchIcon className={s.headerIcon} />
             </NavLink>
           </NavItem>
           <Dropdown
@@ -226,7 +235,7 @@ class Header extends React.Component {
             toggle={this.toggleMessagesDropdown}
           >
             <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <i className="glyphicon glyphicon-comments" />
+              <MessageIcon className={s.headerIcon} />
             </DropdownToggle>
             <DropdownMenu className={`${s.dropdownMenu} ${s.messages}`}>
               <DropdownItem>
@@ -270,7 +279,7 @@ class Header extends React.Component {
             toggle={this.toggleSettingsDropdown}
           >
             <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <i className="glyphicon glyphicon-cog" />
+              <SettingsIcon addId='header-settings' className={s.headerIcon} />
             </DropdownToggle>
             <DropdownMenu className={`${s.dropdownMenu} ${s.settings}`}>
               <h6>Sidebar on the</h6>
@@ -324,7 +333,7 @@ class Header extends React.Component {
             toggle={this.toggleSupportDropdown}
           >
             <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <i className="glyphicon glyphicon-globe" />
+              <BellIcon className={s.headerIcon} />
               <span className={s.count}>8</span>
             </DropdownToggle>
             <DropdownMenu right className={`${s.dropdownMenu} ${s.support}`}>
@@ -376,7 +385,7 @@ class Header extends React.Component {
               className={`${s.navItem} text-white`}
               href="#"
             >
-              <i className="glyphicon glyphicon-off" />
+              <PowerIcon className={s.headerIcon} />
             </NavLink>
           </NavItem>
           <NavItem className="d-md-none">
@@ -385,7 +394,7 @@ class Header extends React.Component {
               className={`${s.navItem} text-white`}
               href="#"
             >
-              <i className="fa fa-bars" />
+            <BurgerIcon className={s.headerIcon} />
             </NavLink>
           </NavItem>
         </Nav>

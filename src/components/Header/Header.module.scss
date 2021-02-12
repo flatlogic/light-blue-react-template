@@ -12,15 +12,17 @@
 
   :global {
     .alert {
-      width: 265px;
+      height: 30px;
+      width: 270px;
       display: block;
       margin: 0;
       transition: margin-top 0.2s ease;
       background: $text-transparent;
       border: none;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      font-weight: $font-weight-thin;
       line-height: 20px;
-      padding: 2px 8px;
+      padding: 5px 8px;
       color: #f8f8f8;
       border-radius: 10px;
 
@@ -29,10 +31,14 @@
       }
     
       button.close {
-        color: #f8f8f8;
-        font-weight: bold;
+        color: $icon-color;
+        font-weight: normal;
         font-size: 18px !important;
         right: 5px !important;
+        margin-top: 2px;
+      }
+      .btn-link > svg {
+        vertical-align: bottom;
       }
     }
 
@@ -139,8 +145,8 @@
 .divider {
   display: block;
   width: 1px;
-  margin: 10px 20px;
-  background: $white;
+  margin: 10px 14px;
+  background: $content-color;
 }
 
 .navItem {
@@ -333,7 +339,8 @@
 }
 
 .accountCheck {
-  color: $text-color
+  color: $text-color;
+  font-weight: $font-weight-normal;
 }
 
 .notificationsWrapper {
@@ -350,10 +357,18 @@
   background: $blue;
   font-weight: 600;
   font-size: 18px;
+  margin-right: 10px;
 }
 
 .badge {
-  margin-left: 5px;
-  margin-right: 5px;
-  border-radius: 10px
+  margin-left: 6px;
+  margin-right: 3px;
+  border-radius: 50%;
+  color: #1B1E3F;
+  font-size: $font-size-mini;
+  font-weight: $font-weight-bold;
+}
+
+.headerIcon {
+  fill: $icon-color;
 }

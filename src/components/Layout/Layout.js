@@ -79,11 +79,11 @@ class Layout extends React.Component {
                   <Switch>
                     <Route path="/app/main" exact render={() => <Redirect to="/app/main/dashboard" />} />
                     <Route path="/app/main/dashboard" exact component={Dashboard} />
-                    <Route path="/app/icons" exact component={UIIcons} />
+                    <Route path="/app/components/icons" exact component={UIIcons} />
                     <Route path="/app/notifications" exact component={UINotifications} />
-                    <Route path="/app/charts" exact component={Charts} />
+                    <Route path="/app/components/charts" exact component={Charts} />
                     <Route path="/app/tables" exact component={TablesStatic} />
-                    <Route path="/app/maps" exact component={MapsGoogle} />
+                    <Route path="/app/components/maps" exact component={MapsGoogle} />
                     <Route path="/app/typography" exact component={CoreTypography} />
                   </Switch>
                 </CSSTransition>

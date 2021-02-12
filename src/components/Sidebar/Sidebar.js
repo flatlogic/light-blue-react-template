@@ -87,7 +87,7 @@ class Sidebar extends React.Component {
                         activeItem={this.props.activeItem}
                         header="Dashboard"
                         isHeader
-                        iconName={<HomeIcon />}
+                        iconName={<HomeIcon className={s.menuIcon} />}
                         link="/app/main"
                         index="main"
                     />
@@ -97,7 +97,7 @@ class Sidebar extends React.Component {
                         activeItem={this.props.activeItem}
                         header="Typography"
                         isHeader
-                        iconName={<TypographyIcon />}
+                        iconName={<TypographyIcon className={s.menuIcon} />}
                         link="/app/typography"
                         index="core"
                     />
@@ -106,7 +106,7 @@ class Sidebar extends React.Component {
                         activeItem={this.props.activeItem}
                         header="Tables Basic"
                         isHeader
-                        iconName={<TablesIcon />}
+                        iconName={<TablesIcon className={s.menuIcon} />}
                         link="/app/tables"
                         index="tables"
                     />
@@ -115,7 +115,7 @@ class Sidebar extends React.Component {
                         activeItem={this.props.activeItem}
                         header="Notifications"
                         isHeader
-                        iconName={<NotificationsIcon />}
+                        iconName={<NotificationsIcon className={s.menuIcon}/>}
                         link="/app/notifications"
                         index="ui"
                     />
@@ -124,18 +124,18 @@ class Sidebar extends React.Component {
                         activeItem={this.props.activeItem}
                         header="Components"
                         isHeader
-                        iconName={<ComponentsIcon />}
-                        link="/app/forms"
-                        index="forms"
+                        iconName={<ComponentsIcon className={s.menuIcon}/>}
+                        link="/app/components"
+                        index="components"
                         childrenLinks={[
                             {
-                                header: 'Charts', link: '/app/charts',
+                                header: 'Charts', link: '/app/components/charts',
                             },
                             {
-                                header: 'Icons', link: '/app/icons',
+                                header: 'Icons', link: '/app/components/icons',
                             },
                             {
-                                header: 'Maps', link: '/app/maps',
+                                header: 'Maps', link: '/app/components/maps',
                             },
                         ]}
                     />

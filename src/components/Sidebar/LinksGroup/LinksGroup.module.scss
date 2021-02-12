@@ -54,6 +54,18 @@
   }
 }
 
+a.headerLinkActive {
+  font-weight: $font-weight-semi-bold;
+  font-size: 16px;
+
+  .icon {
+    background-color: $icon-color;
+    svg {
+      fill: #0D2B47;
+    }
+  }
+}
+
 .headerLabel {
   font-weight: 600;
   color: theme-color('warning');
@@ -72,14 +84,6 @@
   font-weight: $font-weight-bold;
 
   @include transition(transform 0.3s ease-in-out);
-}
-
-a.headerLinkActive {
-  @include icon-style;
-}
-
-.accordionToggle:focus {
-  @include icon-style;
 }
 
 .panel {
