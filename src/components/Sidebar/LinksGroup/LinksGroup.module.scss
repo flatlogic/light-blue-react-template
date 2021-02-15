@@ -91,7 +91,8 @@ a.headerLinkActive {
   box-shadow: none;
   margin: 0;
   border-radius: 0;
-  background-color: lighten($sidebar-bg-color, 5%);
+  color: white;
+  background-color: rgba(18, 20, 43, 0.42);
 
   a.headerLinkActive {
     font-size: 1rem;

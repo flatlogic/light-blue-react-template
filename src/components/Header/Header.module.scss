@@ -17,13 +17,13 @@
       display: block;
       margin: 0;
       transition: margin-top 0.2s ease;
-      background: $text-transparent;
+      background: #253259;
       border: none;
       font-size: 1rem;
       font-weight: $font-weight-thin;
       line-height: 20px;
       padding: 5px 8px;
-      color: #f8f8f8;
+      color: rgba(255, 255, 255, 0.6);
       border-radius: 10px;
 
       @media (max-width: breakpoint-max(sm)) {
@@ -309,15 +309,13 @@
 
 .count {
   position: absolute;
-  bottom: 6px;
-  right: 4px;
-  font-size: 0.56rem;
-  font-weight: normal;
-  background: rgba(51, 51, 51, 0.55);
+  width: 6px;
+  height: 6px;
+  bottom: 8px;
+  right: 5px;
+  background: $green; 
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1em;
-  padding: 2px 4px;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .notificationsMenu {

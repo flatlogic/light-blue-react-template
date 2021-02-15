@@ -44,7 +44,7 @@ import sender1 from "../../assets/1.png";
 import sender2 from "../../assets/2.png";
 import sender3 from "../../assets/3.png";
 
-import avatar from "../../assets/people/a5.jpg";
+import avatar from "../../assets/people/a7.jpg";
 
 import s from "./Header.module.scss";
 import "animate.css";
@@ -334,7 +334,7 @@ class Header extends React.Component {
           >
             <DropdownToggle nav className={`${s.navItem} text-white`}>
               <BellIcon className={s.headerIcon} />
-              <span className={s.count}>8</span>
+              <div className={s.count}></div>
             </DropdownToggle>
             <DropdownMenu right className={`${s.dropdownMenu} ${s.support}`}>
               <DropdownItem>

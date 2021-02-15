@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.7]
+
+- Updated sidebar and navbar icons
+- Updated sidebar and navbar design 
+
 ## [1.2.6]
 
 - Fixed header's notification bar 
