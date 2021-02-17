@@ -10,11 +10,11 @@ import LinksGroup from './LinksGroup';
 
 import {changeActiveSidebarItem} from '../../actions/navigation';
 import {logoutUser} from '../../actions/user';
-import HomeIcon from '../Icons/HomeIcon/HomeIcon.js';
-import TypographyIcon from '../Icons/TypographyIcon/TypographyIcon.js';
-import TablesIcon from '../Icons/TablesIcon/TablesIcon.js';
-import NotificationsIcon from '../Icons/NotificationsIcon/NotificationsIcon.js';
-import ComponentsIcon from '../Icons/ComponentsIcon/ComponentsIcon.js';
+import HomeIcon from '../Icons/SidebarIcons/HomeIcon';
+import TypographyIcon from '../Icons/SidebarIcons/TypographyIcon';
+import TablesIcon from '../Icons/SidebarIcons/TablesIcon';
+import NotificationsIcon from '../Icons/SidebarIcons/NotificationsIcon';
+import ComponentsIcon from '../Icons/SidebarIcons/ComponentsIcon';
 
 
 
@@ -148,19 +148,19 @@ class Sidebar extends React.Component {
                 <ul className={s.sidebarLabels}>
                     <li>
                         <a href="#">
-                            <i className="fa fa-circle text-success ml-2"/>
+                            <i className="fa fa-circle text-success mr-2"/>
                             <span className={s.labelName}>My Recent</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i className="fa fa-circle text-primary ml-2"/>
+                            <i className="fa fa-circle text-primary mr-2"/>
                             <span className={s.labelName}>Starred</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i className="fa fa-circle text-danger ml-2"/>
+                            <i className="fa fa-circle text-danger mr-2"/>
                             <span className={s.labelName}>Background</span>
                         </a>
                     </li>

@@ -24,13 +24,13 @@ import {
   FormGroup,
 } from "reactstrap";
 import Notifications from "../Notifications";
-import PowerIcon from "../Icons/PowerIcon/PowerIcon.js";
-import BellIcon from "../Icons/BellIcon/BellIcon.js";
-import SettingsIcon from "../Icons/SettingsIcon/SettingsIcon.js";
-import MessageIcon from "../Icons/MessageIcon/MessageIcon.js";
-import BurgerIcon from "../Icons/BurgerIcon/BurgerIcon.js";
-import SearchIcon from "../Icons/SearchIcon/SearchIcon.js";
-import SearchIconWhite from "../Icons/SearchIconWhite/SearchIconWhite.js";
+import PowerIcon from "../Icons/HeaderIcons/PowerIcon";
+import BellIcon from "../Icons/HeaderIcons/BellIcon";
+import SettingsIcon from "../Icons/HeaderIcons/SettingsIcon";
+import MessageIcon from "../Icons/HeaderIcons/MessageIcon";
+import BurgerIcon from "../Icons/HeaderIcons/BurgerIcon";
+import SearchIcon from "../Icons/HeaderIcons/SearchIcon";
+import SearchIconWhite from "../Icons/HeaderIcons/SearchIconWhite";
 
 import { logoutUser } from "../../actions/user";
 import {
