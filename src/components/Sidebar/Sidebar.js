@@ -181,9 +181,9 @@ class Sidebar extends React.Component {
                             }}
                         >
                             <span>{alert.title}</span><br/>
-                            <Progress className={`bg-subtle-blue progress-xs mt-2 mb-1`} color={alert.color}
+                            <Progress className={`bg-subtle-blue progress-xs mt-1`} color={alert.color}
                                       value={alert.value}/>
-                            <small>{alert.footer}</small>
+                            <span className={s.alertFooter}>{alert.footer}</span>
                         </Alert>,
                     )}
                 </div>

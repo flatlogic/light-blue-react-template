@@ -30,7 +30,8 @@ import SettingsIcon from "../Icons/HeaderIcons/SettingsIcon";
 import MessageIcon from "../Icons/HeaderIcons/MessageIcon";
 import BurgerIcon from "../Icons/HeaderIcons/BurgerIcon";
 import SearchIcon from "../Icons/HeaderIcons/SearchIcon";
-import SearchIconWhite from "../Icons/HeaderIcons/SearchIconWhite";
+import ArrowIcon from "../Icons/HeaderIcons/ArrowIcon";
+
 
 import { logoutUser } from "../../actions/user";
 import {
@@ -40,9 +41,9 @@ import {
   changeSidebarVisibility,
 } from "../../actions/navigation";
 
-import sender1 from "../../assets/1.png";
-import sender2 from "../../assets/2.png";
-import sender3 from "../../assets/3.png";
+import sender1 from "../../assets/people/a1.jpg";
+import sender2 from "../../assets/people/a5.jpg";
+import sender3 from "../../assets/people/a4.jpg";
 
 import avatar from "../../assets/people/a7.jpg";
 
@@ -138,266 +139,268 @@ class Header extends React.Component {
 
   render() {
     return (
-      <Navbar className={`d-print-none main-navbar ${s.root}`}>
-        <UncontrolledAlert
-          className={`${s.alert} mr-5 d-lg-down-none animate__animated animate__bounceIn animate__delay-1s`}
-        >
-          Check out Light Blue{" "}
-          <button
-            className="btn-link"
-            onClick={() => this.setState({ settingsOpen: true })}
+      <Navbar className={`d-print-none `}>
+        <div className={s.burger}>
+          <NavLink
+              onClick={this.toggleSidebar}
+              className={`d-md-none ${s.navItem} text-white`}
+              href="#"
+            >
+              <BurgerIcon className={s.headerIcon} />
+            </NavLink>
+        </div>
+        <div className={`d-print-none ${s.root}`}>
+          <UncontrolledAlert
+            className={`${s.alert} mr-3 d-lg-down-none animate__animated animate__bounceIn animate__delay-1s`}
           >
-            <SettingsIcon className={s.headerIcon} />
-          </button>{" "}
-          on the right!
-        </UncontrolledAlert>
-        <Collapse
-          className={`${s.searchCollapse} ml-lg-0 mr-md-`}
-          isOpen={this.state.searchOpen}
-        >
-          <InputGroup
-            className={`${s.navbarForm} ${
-              this.state.searchFocused ? s.navbarFormFocused : ""
-            }`}
+            Check out Light Blue{" "}
+            <button
+              className="btn-link"
+              onClick={() => this.setState({ settingsOpen: true })}
+            >
+              <SettingsIcon className={s.settingsIcon} />
+            </button>{" "}
+            on the right!
+          </UncontrolledAlert>
+        </div>
+        <div className={`d-print-none ${s.root}`}>
+          <Collapse
+            className={`${s.searchCollapse} ml-lg-0 mr-md-3`}
+            isOpen={this.state.searchOpen}
           >
-            <InputGroupAddon addonType="prepend" className={s.inputAddon}>
-              <InputGroupText>
-                <i className="fa fa-search" />
-                {/* <SearchIconWhite /> */}
-              </InputGroupText>
-            </InputGroupAddon>
-            <Input
-              id="search-input-2"
-              placeholder="Search..."
-              className="input-transparent"
-              onFocus={() => this.setState({ searchFocused: true })}
-              onBlur={() => this.setState({ searchFocused: false })}
-            />
-          </InputGroup>
-        </Collapse>
-        <Form className="d-md-down-none mr-3 ml-3" inline>
-          <FormGroup>
-            <InputGroup className="input-group-no-border">
-              <InputGroupAddon addonType="prepend">
+            <InputGroup
+              className={`${s.navbarForm} ${
+                this.state.searchFocused ? s.navbarFormFocused : ""
+              }`}
+            >
+              <InputGroupAddon addonType="prepend" className={s.inputAddon}>
                 <InputGroupText>
-                  <SearchIconWhite />
+                  <i className="fa fa-search" />
                 </InputGroupText>
               </InputGroupAddon>
               <Input
-                id="search-input"
+                id="search-input-2"
+                placeholder="Search..."
                 className="input-transparent"
-                placeholder="Search Dashboard"
+                onFocus={() => this.setState({ searchFocused: true })}
+                onBlur={() => this.setState({ searchFocused: false })}
               />
             </InputGroup>
-          </FormGroup>
-        </Form>
+          </Collapse>
+          <Form className="d-md-down-none mr-3 ml-3" inline>
+            <FormGroup>
+              <InputGroup className={`input-group-no-border ${s.searchForm}`}>
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText className={s.inputGroupText}>
+                    <SearchIcon className={s.headerIcon} />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input
+                  id="search-input"
+                  className="input-transparent"
+                  placeholder="Search Dashboard"
+                />
+              </InputGroup>
+            </FormGroup>
+          </Form>
 
-        <Nav className="ml-md-0 d-flex nav-responsive">
-          <Dropdown
-            nav
-            isOpen={this.state.notificationsOpen}
-            toggle={this.toggleNotifications}
-            id="basic-nav-dropdown"
-            className={`${s.notificationsMenu}`}
-            style={{ marginRight: '1.5rem' }}
-          >
-            <DropdownToggle nav caret style={{ color: "#3979F6", padding: 0 }}>
-              <span
-                className={`${s.avatar} rounded-circle thumb-sm float-left`}
+          <Nav className="ml-md-0">
+            <Dropdown
+              nav
+              isOpen={this.state.notificationsOpen}
+              toggle={this.toggleNotifications}
+              id="basic-nav-dropdown"
+              className={`${s.notificationsMenu}`}
+            >
+              <DropdownToggle nav caret style={{ color: "#C1C3CF", padding: 0 }}>
+                <span
+                  className={`${s.avatar} rounded-circle thumb-sm float-left`}
+                >
+                  <img src={avatar} alt="..." />
+                </span>
+                <span className={`small d-sm-down-none ${s.accountCheck}`}>Philip smith</span>
+                <Badge className={`d-sm-down-none ${s.badge}`} color="danger">
+                  9
+                </Badge>
+              </DropdownToggle>
+              <DropdownMenu
+                right
+                className={`${s.notificationsWrapper} py-0 animate__animated animate__faster animate__fadeInUp`}
               >
-                <img src={avatar} alt="..." />
-              </span>
-              <span className={`${s.accountCheck}`}>Philip smith</span>
-              <Badge className={s.badge} color="danger">
-                9
-              </Badge>
-            </DropdownToggle>
-            <DropdownMenu
-              right
-              className={`${s.notificationsWrapper} py-0 animate__animated animate__faster animate__fadeInUp`}
+                <Notifications />
+              </DropdownMenu>
+            </Dropdown>
+            <NavItem className="d-lg-none">
+              <NavLink
+                onClick={this.toggleSearchOpen}
+                className={s.navItem}
+                href="#"
+              >
+                <SearchIcon addId='header-search' className={s.headerIcon} />
+              </NavLink>
+            </NavItem>
+            <Dropdown
+              className="d-none d-sm-block"
+              nav
+              isOpen={this.state.messagesOpen}
+              toggle={this.toggleMessagesDropdown}
             >
-              <Notifications />
-            </DropdownMenu>
-          </Dropdown>
-          <NavItem className="d-lg-none d-md-block d-sm-none">
-            <NavLink
-              onClick={this.toggleSearchOpen}
-              className={s.navItem}
-              href="#"
-            >
-              <SearchIcon className={s.headerIcon} />
-            </NavLink>
-          </NavItem>
-          <Dropdown
-            className="d-none d-sm-block"
-            nav
-            isOpen={this.state.messagesOpen}
-            toggle={this.toggleMessagesDropdown}
-          >
-            <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <MessageIcon className={s.headerIcon} />
-            </DropdownToggle>
-            <DropdownMenu className={`${s.dropdownMenu} ${s.messages}`}>
-              <DropdownItem>
-                <img className={s.image} src={sender1} alt="" />
-                <div className={s.details}>
-                  <div>Jane Hew</div>
-                  <div className={s.text}>Hey, John! How is it going? ...</div>
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <img className={s.image} src={sender2} alt="" />
-                <div className={s.details}>
-                  <div>Alies Rumiancaŭ</div>
-                  <div className={s.text}>
-                    I will definitely buy this template
+              <DropdownToggle nav className={`d-sm-down-none ${s.navItem} text-white`}>
+                <MessageIcon className={s.headerIcon} />
+              </DropdownToggle>
+              <DropdownMenu className={`${s.dropdownMenu} ${s.messages}`}>
+                <DropdownItem>
+                  <img className={s.image} src={sender1} alt="" />
+                  <div className={s.details}>
+                    <div>Jane Hew</div>
+                    <div className={s.text}>Hey, John! How is it going? ...</div>
                   </div>
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <img className={s.image} src={sender3} alt="" />
-                <div className={s.details}>
-                  <div>Michał Rumiancaŭ</div>
-                  <div className={s.text}>
-                    Is it really Lore ipsum? Lore ...
+                </DropdownItem>
+                <DropdownItem>
+                  <img className={s.image} src={sender2} alt="" />
+                  <div className={s.details}>
+                    <div>Alies Rumiancaŭ</div>
+                    <div className={s.text}>
+                      I will definitely buy this template
+                    </div>
                   </div>
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                {/* eslint-disable-next-line */}
-                <a href="#" className="text-white">
-                  See all messages <i className="fa fa-arrow-right" />
-                </a>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <NavItem className={`${s.divider} d-none d-sm-block`} />
-          <Dropdown
-            className="d-none d-sm-block"
-            nav
-            isOpen={this.state.settingsOpen}
-            toggle={this.toggleSettingsDropdown}
-          >
-            <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <SettingsIcon addId='header-settings' className={s.headerIcon} />
-            </DropdownToggle>
-            <DropdownMenu className={`${s.dropdownMenu} ${s.settings}`}>
-              <h6>Sidebar on the</h6>
-              <ButtonGroup size="sm">
-                <Button
-                  color="primary"
-                  onClick={() => this.moveSidebar("left")}
-                  className={
-                    this.props.sidebarPosition === "left" ? "active" : ""
-                  }
-                >
-                  Left
-                </Button>
-                <Button
-                  color="primary"
-                  onClick={() => this.moveSidebar("right")}
-                  className={
-                    this.props.sidebarPosition === "right" ? "active" : ""
-                  }
-                >
-                  Right
-                </Button>
-              </ButtonGroup>
-              <h6 className="mt-2">Sidebar</h6>
-              <ButtonGroup size="sm">
-                <Button
-                  color="primary"
-                  onClick={() => this.toggleVisibilitySidebar("show")}
-                  className={
-                    this.props.sidebarVisibility === "show" ? "active" : ""
-                  }
-                >
-                  Show
-                </Button>
-                <Button
-                  color="primary"
-                  onClick={() => this.toggleVisibilitySidebar("hide")}
-                  className={
-                    this.props.sidebarVisibility === "hide" ? "active" : ""
-                  }
-                >
-                  Hide
-                </Button>
-              </ButtonGroup>
-            </DropdownMenu>
-          </Dropdown>
-          <Dropdown
-            className="d-none d-sm-block"
-            nav
-            isOpen={this.state.supportOpen}
-            toggle={this.toggleSupportDropdown}
-          >
-            <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <BellIcon className={s.headerIcon} />
-              <div className={s.count}></div>
-            </DropdownToggle>
-            <DropdownMenu right className={`${s.dropdownMenu} ${s.support}`}>
-              <DropdownItem>
-                <Badge color="danger">
-                  <i className="fa fa-bell-o" />
-                </Badge>
-                <div className={s.details}>Check out this awesome ticket</div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="warning">
-                  <i className="fa fa-question-circle" />
-                </Badge>
-                <div className={s.details}>What is the best way to get ...</div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="success">
-                  <i className="fa fa-info-circle" />
-                </Badge>
-                <div className={s.details}>
-                  This is just a simple notification
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="info">
-                  <i className="fa fa-plus" />
-                </Badge>
-                <div className={s.details}>12 new orders has arrived today</div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="danger">
-                  <i className="fa fa-tag" />
-                </Badge>
-                <div className={s.details}>
-                  One more thing that just happened
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                {/* eslint-disable-next-line */}
-                <a href="#" className="text-white">
-                  See all tickets <i className="fa fa-arrow-right" />
-                </a>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <NavItem>
-            <NavLink
-              onClick={this.doLogout}
-              className={`${s.navItem} text-white`}
-              href="#"
+                </DropdownItem>
+                <DropdownItem>
+                  <img className={s.image} src={sender3} alt="" />
+                  <div className={s.details}>
+                    <div>Michał Rumiancaŭ</div>
+                    <div className={s.text}>
+                      Is it really Lore ipsum? Lore ...
+                    </div>
+                  </div>
+                </DropdownItem>
+                <DropdownItem>
+                  {/* eslint-disable-next-line */}
+                  <a href="#" className="text-white">
+                    See all messages <ArrowIcon className={s.headerIcon} maskName="messagesArrow" />
+                  </a>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+            <NavItem className={`${s.divider} d-none d-sm-block`} />
+            <Dropdown
+              className="d-none d-sm-block"
+              nav
+              isOpen={this.state.settingsOpen}
+              toggle={this.toggleSettingsDropdown}
             >
-              <PowerIcon className={s.headerIcon} />
-            </NavLink>
-          </NavItem>
-          <NavItem className="d-md-none">
-            <NavLink
-              onClick={this.toggleSidebar}
-              className={`${s.navItem} text-white`}
-              href="#"
+              <DropdownToggle nav className={`${s.navItem} text-white`}>
+                <SettingsIcon addId='header-settings' className={s.headerIcon} />
+              </DropdownToggle>
+              <DropdownMenu className={`${s.dropdownMenu} ${s.settings}`}>
+                <h6>Sidebar on the</h6>
+                <ButtonGroup size="sm">
+                  <Button
+                    color="primary"
+                    onClick={() => this.moveSidebar("left")}
+                    className={
+                      this.props.sidebarPosition === "left" ? "active" : ""
+                    }
+                  >
+                    Left
+                  </Button>
+                  <Button
+                    color="primary"
+                    onClick={() => this.moveSidebar("right")}
+                    className={
+                      this.props.sidebarPosition === "right" ? "active" : ""
+                    }
+                  >
+                    Right
+                  </Button>
+                </ButtonGroup>
+                <h6 className="mt-2">Sidebar</h6>
+                <ButtonGroup size="sm">
+                  <Button
+                    color="primary"
+                    onClick={() => this.toggleVisibilitySidebar("show")}
+                    className={
+                      this.props.sidebarVisibility === "show" ? "active" : ""
+                    }
+                  >
+                    Show
+                  </Button>
+                  <Button
+                    color="primary"
+                    onClick={() => this.toggleVisibilitySidebar("hide")}
+                    className={
+                      this.props.sidebarVisibility === "hide" ? "active" : ""
+                    }
+                  >
+                    Hide
+                  </Button>
+                </ButtonGroup>
+              </DropdownMenu>
+            </Dropdown>
+            <Dropdown
+              className="d-none d-sm-block"
+              nav
+              isOpen={this.state.supportOpen}
+              toggle={this.toggleSupportDropdown}
             >
-            <BurgerIcon className={s.headerIcon} />
-            </NavLink>
-          </NavItem>
-        </Nav>
+              <DropdownToggle nav className={`${s.navItem} text-white`}>
+                <BellIcon className={s.headerIcon} />
+                <div className={s.count}></div>
+              </DropdownToggle>
+              <DropdownMenu right className={`${s.dropdownMenu} ${s.support}`}>
+                <DropdownItem>
+                  <Badge color="danger">
+                    <i className="fa fa-bell-o" />
+                  </Badge>
+                  <div className={s.details}>Check out this awesome ticket</div>
+                </DropdownItem>
+                <DropdownItem>
+                  <Badge color="warning">
+                    <i className="fa fa-question-circle" />
+                  </Badge>
+                  <div className={s.details}>What is the best way to get ...</div>
+                </DropdownItem>
+                <DropdownItem>
+                  <Badge color="success">
+                    <i className="fa fa-info-circle" />
+                  </Badge>
+                  <div className={s.details}>
+                    This is just a simple notification
+                  </div>
+                </DropdownItem>
+                <DropdownItem>
+                  <Badge color="info">
+                    <i className="fa fa-plus" />
+                  </Badge>
+                  <div className={s.details}>12 new orders has arrived today</div>
+                </DropdownItem>
+                <DropdownItem>
+                  <Badge color="danger">
+                    <i className="fa fa-tag" />
+                  </Badge>
+                  <div className={s.details}>
+                    One more thing that just happened
+                  </div>
+                </DropdownItem>
+                <DropdownItem>
+                  {/* eslint-disable-next-line */}
+                  <a href="#" className="text-white">
+                    See all tickets <ArrowIcon className={s.headerIcon} maskName="bellArrow" />
+                  </a>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+            <NavItem>
+              <NavLink
+                onClick={this.doLogout}
+                className={`${s.navItem} text-white`}
+                href="#"
+              >
+                <PowerIcon className={s.headerIcon} />
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </div>
       </Navbar>
     );
   }

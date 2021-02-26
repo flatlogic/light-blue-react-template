@@ -9,10 +9,10 @@
 
   a {
     font-size: 14px;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-thin;
     display: flex;
     justify-content: left;
-    color: $white;
+    color: $icon-color;
     text-decoration: none;
     cursor: pointer;
 
@@ -84,10 +84,6 @@ a.headerLinkActive {
   font-weight: $font-weight-bold;
 
   @include transition(transform 0.3s ease-in-out);
-}
-
-a.headerLinkActive {
-  font-weight: bold;
 }
 
 .accordionToggle {

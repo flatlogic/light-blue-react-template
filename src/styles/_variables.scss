@@ -39,7 +39,8 @@ $black: #000 !default;
 $gray-light: $gray-100 !default;
 
 $bg-custom-dark: #040620;
-$main-gradient: #1B1E3F;
+$main-background: #1B1E3F;
+$main-gradient: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193B);
 
 $lime: #8cbf26 !default;
 $red: #db2a34 !default;
@@ -55,7 +56,9 @@ $subtle-blue: #474d84 !default;
 $gray: #595d78 !default;
 $inverse: #30314e !default;
 $violet_deep: #1b1e3c !default;
-$icon-blue: #3979F6 !default;
+$icon-blue:  #3979F6 !default;
+$main-gray:  #C1C3CF !default;
+$header-gray: #51536C !default;
 
 $theme-colors: (
   primary: $blue,
@@ -78,7 +81,7 @@ $theme-colors: (
 );
 
 $link-color: #1870dc;
-$icon-color: $icon-blue;
+$icon-color: $main-gray;
 
 $text-color: rgba($white, 0.9) !default;
 $content-color: rgba($white, 0.6) !default;
@@ -121,8 +124,8 @@ $sidebar-action-bg: transparent !default;
 
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $orange !default;
-$sidebar-item-padding: 13px 20px !default;
-$sidebar-sub-item-padding: 10px 20px 10px 35px;
+$sidebar-item-padding: 13px 20px 13px 10px !default;
+$sidebar-sub-item-padding: 12px 20px 12px 30px;
 $sidebar-scrollbar-bg: transparent;
 $sidebar-item-hover-bg-color: rgba(0, 0, 0, 0.07);
 $chat-sidebar-bg-color: $sidebar-bg-color !default;

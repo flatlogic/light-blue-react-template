@@ -1,41 +1,43 @@
 @import '../../styles/app';
 
 .root {
+  display: flex;
   justify-content: flex-end !important;
   @media (max-width: breakpoint-max(sm)) {
     margin-bottom: 50px;
   }
 
   ul > li > a {
-    padding: 0.5rem 0.5rem
+    padding: 0.5rem 12px;
+    @media(max-width: 580px) {
+      padding: 0.5rem 6px;
+    }
   }
 
   :global {
     .alert {
       height: 30px;
-      width: 270px;
+      width: 275px;
       display: block;
       margin: 0;
       transition: margin-top 0.2s ease;
       background: #253259;
       border: none;
       font-size: 1rem;
-      font-weight: $font-weight-thin;
       line-height: 20px;
       padding: 5px 8px;
       color: rgba(255, 255, 255, 0.6);
       border-radius: 10px;
 
-      @media (max-width: breakpoint-max(sm)) {
+      @media (max-width: 1255px) {
         display: none !important;
       }
     
       button.close {
-        color: $icon-color;
+        color: $icon-blue;
         font-weight: normal;
         font-size: 18px !important;
-        right: 5px !important;
-        margin-top: 2px;
+        margin-top: 1px;
       }
       .btn-link > svg {
         vertical-align: bottom;
@@ -105,11 +107,6 @@
   &:global(.collapse) {
     display: none;
   }
-  @media (max-width: breakpoint-max(sm)) {
-    &:global(.collapse) {
-      display: block;
-    }
-  }
 }
 
 .navbarForm {
@@ -146,7 +143,7 @@
   display: block;
   width: 1px;
   margin: 10px 14px;
-  background: $content-color;
+  background: $icon-color;
 }
 
 .navItem {
@@ -173,6 +170,7 @@
   float: left;
   width: 40px;
   margin-top: 7px;
+  border-radius: 50%;
 }
 
 .imageAccount {
@@ -181,7 +179,7 @@
 }
 
 .dropdownMenu {
-  background: $main-gradient !important;
+  background: $main-background !important;
   box-shadow: 0 0px 40px 2px rgba(#020202,.5);
   border: none;
   color: $white;
@@ -319,6 +317,7 @@
 }
 
 .notificationsMenu {
+  padding: 0 12px;
   > a {
     background-color: transparent!important;    
   }
@@ -329,6 +328,11 @@
     top: $navbar-height !important;
   }
 
+  ::after {
+    padding: 0;
+    margin: 0;
+  }
+
   @media(max-width: 580px) {
     :global .dropdown-menu {
       right: -50% !important;
@@ -337,8 +341,9 @@
 }
 
 .accountCheck {
-  color: $text-color;
+  color: $icon-color;
   font-weight: $font-weight-normal;
+  font-size: 1rem;
 }
 
 .notificationsWrapper {
@@ -356,17 +361,42 @@
   font-weight: 600;
   font-size: 18px;
   margin-right: 10px;
+  img {
+    height: 100%;
+  }
 }
 
 .badge {
-  margin-left: 6px;
-  margin-right: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin: auto 6px;
   border-radius: 50%;
   color: #1B1E3F;
-  font-size: $font-size-mini;
+  font-size: 12px;
   font-weight: $font-weight-bold;
+}
+
+.burger {
+  align-self: end;
+  padding-left: 0;
 }
 
 .headerIcon {
   fill: $icon-color;
+}
+
+.settingsIcon {
+  fill: $icon-blue;
+}
+
+.searchForm {
+  min-width: 255px;
+}
+
+.inputGroupText {
+  background: #12142B;
+  opacity: .8;
 }
