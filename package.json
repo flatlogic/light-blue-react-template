@@ -72,7 +72,7 @@
     "echarts-for-react": "^2.0.16",
     "font-awesome": "4.7.0",
     "glyphicons-halflings": "^1.9.1",
-    "highcharts": "^8.1.2",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "^3.0.0",
     "line-awesome": "^1.3.0",
     "moment": "^2.27.0",
