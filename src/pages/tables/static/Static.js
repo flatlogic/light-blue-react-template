@@ -148,7 +148,7 @@ class Static extends React.Component {
           Tables - <span className="fw-semi-bold">Static</span>
         </h2>
         <Row>
-          <Col>
+          <Col lg={6} md={12} sm={12}>
             <Widget
               title={
                 <h5>
@@ -159,7 +159,8 @@ class Static extends React.Component {
               close
               bodyClass={s.mainTableWidget}
             >
-              <Table striped>
+            <div className={s.overFlow}>
+              <Table lg={12} md={12} sm={12} striped>
                 <thead>
                   <tr className="fs-sm">
                     <th className="hidden-sm-down">#</th>
@@ -224,6 +225,7 @@ class Static extends React.Component {
                   ))}
                 </tbody>
               </Table>
+            </div>
               <div className="clearfix">
                 <div className="float-right">
                   <Button color="default" className="mr-2" size="sm">
@@ -251,9 +253,7 @@ class Static extends React.Component {
               </div>
             </Widget>
           </Col>
-        </Row>
-        <Row>
-          <Col lg={6}>
+          <Col lg={6} md={12} sm={12}>
             <Widget
               title={
                 <h5>
@@ -271,6 +271,7 @@ class Static extends React.Component {
                 Each row is highlighted. You will never lost there. Just{" "}
                 <code>.table-striped</code> it.
               </p>
+              <div className={`widget-table-overflow ${s.overFlow}`}>
               <Table className="table-striped">
                 <thead>
                   <tr>
@@ -362,6 +363,7 @@ class Static extends React.Component {
                   </tr>
                 </tbody>
               </Table>
+              </div>
               <br />
               <br />
               <h3>
@@ -371,7 +373,7 @@ class Static extends React.Component {
                 {"Trace only what's really important. "}
                 <code>.table-hover</code> is made for it.
               </p>
-              <div className="table-responsive">
+              <div className={s.overFlow}>
                 <Table className="table-hover">
                   <thead>
                     <tr>
@@ -439,10 +441,12 @@ class Static extends React.Component {
                   </tbody>
                   {/* eslint-enable */}
                 </Table>
-              </div>
+                </div>
             </Widget>
           </Col>
-          <Col lg={6}>
+        </Row>
+        <Row> 
+          <Col lg={6} md={6} sm={12}>
             <Widget
               title={
                 <h5>
@@ -461,6 +465,7 @@ class Static extends React.Component {
                 add
                 <code>.table-bordered</code> to it.
               </p>
+              <div className={`widget-table-overflow ${s.overFlow}`}>
               <Table className="table-bordered table-lg mt-lg mb-0">
                 <thead className="text-uppercase">
                   <tr>
@@ -610,7 +615,10 @@ class Static extends React.Component {
                   </tr>
                 </tbody>
               </Table>
+              </div>
             </Widget>
+          </Col>
+          <Col lg={6} md={6} sm={12}> 
             <Widget
               title={
                 <h5>
@@ -629,7 +637,7 @@ class Static extends React.Component {
                 simple css class <code>.widget-table-overflow</code> inside of
                 widget
               </p>
-              <div className="widget-table-overflow">
+              <div className={`widget-table-overflow ${s.overFlow}`}>
                 <Table className="table-striped table-lg mt-lg mb-0">
                   <thead>
                     <tr>

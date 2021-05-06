@@ -162,8 +162,6 @@ class Header extends React.Component {
             </button>{" "}
             on the right!
           </UncontrolledAlert>
-        </div>
-        <div className={`d-print-none ${s.root}`}>
           <Collapse
             className={`${s.searchCollapse} ml-lg-0 mr-md-3`}
             isOpen={this.state.searchOpen}
