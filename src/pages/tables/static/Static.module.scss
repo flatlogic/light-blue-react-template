@@ -4,6 +4,10 @@
 
 }
 
+.overFlow {
+  overflow-x: auto;
+}
+
 .mainTableWidget {
   :global {
     .table td {
