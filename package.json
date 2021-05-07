@@ -1,6 +1,6 @@
 {
   "name": "light-blue-react-template",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "private": true,
   "scripts": {
     "build": "PUBLIC_URL='./' node scripts/build.js",
