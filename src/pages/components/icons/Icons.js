@@ -34,6 +34,7 @@ class Icons extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
+              //style={{marginBottom: "-1px !important"}}
             >
               <span>Glypicons</span>
             </NavLink>
@@ -44,7 +45,7 @@ class Icons extends React.Component {
               onClick={() => { this.toggle('2'); }}
             >
               <span className="mr-xs">FA 4.7.0</span>
-              <Badge color="primary">new</Badge>
+              <Badge color="primary" style={{padding: "3px 8px"}}>new</Badge>
             </NavLink>
           </NavItem>
           <NavItem>
@@ -93,7 +94,7 @@ class Icons extends React.Component {
               onClick={() => { this.toggle('8'); }}
             >
               <span className="mr-xs">Flaticons</span>
-              <Badge color="primary">new</Badge>
+              <Badge color="primary" style={{padding: "3px 8px"}}>new</Badge>
             </NavLink>
           </NavItem>
         </Nav>

@@ -18,8 +18,8 @@
     .alert {
       height: 30px;
       width: 275px;
-      display: block;
-      margin: 0;
+      display: flex;
+      margin: auto;
       transition: margin-top 0.2s ease;
       background: #12142B80;
       border: none;
