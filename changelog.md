@@ -8,8 +8,7 @@
 
 - Updated Pop-up Alert im Dashboard 
 - Updated responsive positioning Tables 
-- Updated follow dependencies and DevDependencies {
-    "Dependencies":
+###Updated follow dependencies and DevDependencies {
         @amcharts/amcharts4": "^4.9.28" ->"^4.10.18",
         "@amcharts/amcharts4-geodata": "^4.1.16" -> "^4.1.20",
         "animate.css": "4.1.0" -> "4.1.1",
@@ -68,7 +67,7 @@
         "webpack": "4.43.0" -> "4.44.0",
         "webpack-dev-server": "3.11.0" -> "3.11.2",
         "workbox-webpack-plugin": "5.1.3" ->  "5.1.4"
-}
+
 
 ## [1.2.7]
 
