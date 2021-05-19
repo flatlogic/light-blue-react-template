@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.9] 
+
+- Fixed Sidebar Width
+
 ## [1.2.8]
 
 - Updated Pop-up Alert im Dashboard 
