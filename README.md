@@ -8,7 +8,7 @@ Free and open-source admin dashboard template built with React and Bootstrap 4. 
 
 [![image](https://user-images.githubusercontent.com/43149862/78150582-270b4380-7440-11ea-826a-64e99b77d06d.png)](https://flatlogic.github.io/light-blue-react-template/)
 
-This dashboard is a lite version (containing only few components) of our [Light Blue React](https://flatlogic.com/templates/light-blue-react). There are all ready-to-use components, that are in full version. It is built on the top of React 16, so it well supported along the web. You can easy customize template by changing SCSS variables. All paddings and colors are in _variables.scss file.
+This dashboard, a lite version (containing only a few components) of our [Light Blue React](https://flatlogic.com/templates/light-blue-react), showcases a subset of the ready-to-use components available in the full version, designed to give developers a preview of its comprehensive capabilities. Constructed on the foundation of React 16, it enjoys broad support across the web, making it an ideal starting point for developing [business software](https://flatlogic.com/) with a modern, user-friendly interface. You can easily customize the template by changing SCSS variables. All paddings and colors are in _variables.scss file.
 
 ## Features
 
