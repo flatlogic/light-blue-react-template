@@ -1,10 +1,10 @@
 {
   "name": "light-blue-react-template",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "private": true,
   "scripts": {
-    "build": "cross-env PUBLIC_URL='./' node scripts/build.js",
-    "start": "node scripts/start.js",
+    "build": "cross-env PUBLIC_URL='./' NODE_OPTIONS=--openssl-legacy-provider node scripts/build.js",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node scripts/start.js",
     "test": "node scripts/test.js"
   },
   "browserslist": [
@@ -113,8 +113,8 @@
     "bundle-loader": "0.5.6",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chalk": "4.1.0",
-    "css-loader": "2.1.1",
     "cross-env": "^7.0.3",
+    "css-loader": "2.1.1",
     "dotenv": "8.0.0",
     "dotenv-expand": "5.1.0",
     "eslint": "5.16.0",
@@ -137,7 +137,6 @@
     "lodash.assign": "^4.2.0",
     "lodash.clonedeep": "^4.5.0",
     "mini-css-extract-plugin": "0.6.0",
-    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.4.3",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -145,7 +144,8 @@
     "postcss-preset-env": "6.6.0",
     "postcss-safe-parser": "4.0.1",
     "resolve": "1.10.1",
-    "sass-loader": "7.1.0",
+    "sass": "^1.81.0",
+    "sass-loader": "^10.2.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.2.3",
     "url-loader": "4.1.0",

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.10] 
+
+- Fixed scripts
+
 ## [1.2.9] 
 
 - Fixed Sidebar Width
