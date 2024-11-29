@@ -492,7 +492,7 @@ $z-index-variants: (
   .form-control:focus,
   .form-control:focus + .input-group-addon,
   &.focus .input-group-addon {
-    @extend .input-no-border:focus;
+    background-color: $gray-100;
   }
 }
 
