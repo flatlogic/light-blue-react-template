@@ -1,17 +1,26 @@
 import { defineConfig, transformWithEsbuild } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// D3 3 reads browser globals through the IIFE receiver.
+const d3BrowserGlobal = {
+  name: 'd3-browser-global',
+  enforce: 'pre',
+  transform(code, id) {
+    if (id.endsWith('/node_modules/d3/d3.js')) {
+      return code.replace(/\}\(\);?\s*$/, '}.call(globalThis);');
+    }
+  },
+};
+
 export default defineConfig({
   base: './',
+  optimizeDeps: { rolldownOptions: { plugins: [d3BrowserGlobal] } },
   plugins: [
+    d3BrowserGlobal,
     {
       name: 'source-jsx',
       enforce: 'pre',
       async transform(code, id) {
-        // D3 3 predates strict CommonJS bundling and reads the browser global through `this`.
-        if (id.endsWith('/node_modules/d3/d3.js')) {
-          return code.replace(/\}\(\);?\s*$/, '}.call(globalThis);');
-        }
         if (/\/src\/.*\.js$/.test(id)) {
           return transformWithEsbuild(code, id, { loader: 'jsx', jsx: 'transform' });
         }

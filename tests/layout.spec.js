@@ -17,6 +17,9 @@ test('layout renders dashboard, navigation and authentication pages', async ({ p
   await page.goto('/#/app/components/charts');
   await expect(page.locator('main svg').first()).toBeVisible();
   await expect(page.locator('main')).toContainText('Charts');
+  const echartsWidget = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Echarts Line Chart' }) });
+  await expect(echartsWidget.locator('canvas, svg').first()).toBeVisible();
+  await expect(echartsWidget.locator('[data-zr-dom-id]')).toHaveAttribute('width', /^[1-9]\d*$/);
   await page.getByRole('link', { name: 'Logout', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Login to your Web App' })).toBeVisible();
   expect(errors).toEqual([]);
