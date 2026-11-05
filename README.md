@@ -103,3 +103,8 @@ without changing React, routing, SCSS, or dashboard pages.
 The previous Layout test depended on undeclared Enzyme/Chai packages and passed
 children to a layout that renders routes. Its browser replacement checks the
 actual login, layout, charts, tables, and typography routes.
+
+
+### Published demo
+
+`docs/` contains the verified production build with relative asset URLs. Refresh its generated assets from `build/` after `npm run build`, preserving deployment metadata. `PLAYWRIGHT_DOCS=1 npm test` serves that directory under `/light-blue-react-template/` and checks its navigation and assets. `node --test tests/service-worker-cleanup.unit.mjs` verifies cache isolation. The retirement service worker removes cached responses only within its app scope and unregisters itself; other apps on the same origin keep their responses.
