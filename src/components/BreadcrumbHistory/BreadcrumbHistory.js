@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 
 class BreadcrumbHistory extends Component {
 

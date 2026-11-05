@@ -1,3 +1,8 @@
+import asset0 from "../../../assets/tables/1.png";
+import asset1 from "../../../assets/tables/2.png";
+import asset2 from "../../../assets/tables/3.png";
+import asset3 from "../../../assets/tables/4.png";
+import asset4 from "../../../assets/tables/5.png";
 import React from "react";
 import {
   Row,
@@ -26,7 +31,7 @@ class Static extends React.Component {
       tableStyles: [
         {
           id: 1,
-          picture: require("../../../assets/tables/1.png"), // eslint-disable-line global-require
+          picture: asset0, // eslint-disable-line global-require
           description: "Palo Alto",
           info: {
             type: "JPEG",
@@ -41,7 +46,7 @@ class Static extends React.Component {
         },
         {
           id: 2,
-          picture: require("../../../assets/tables/2.png"), // eslint-disable-line global-require
+          picture: asset1, // eslint-disable-line global-require
           description: "The Sky",
           info: {
             type: "PSD",
@@ -56,7 +61,7 @@ class Static extends React.Component {
         },
         {
           id: 3,
-          picture: require("../../../assets/tables/3.png"), // eslint-disable-line global-require
+          picture: asset2, // eslint-disable-line global-require
           description: "Down the road",
           label: {
             colorClass: "primary",
@@ -75,7 +80,7 @@ class Static extends React.Component {
         },
         {
           id: 4,
-          picture: require("../../../assets/tables/4.png"), // eslint-disable-line global-require
+          picture: asset3, // eslint-disable-line global-require
           description: "The Edge",
           info: {
             type: "PNG",
@@ -90,7 +95,7 @@ class Static extends React.Component {
         },
         {
           id: 5,
-          picture: require("../../../assets/tables/5.png"), // eslint-disable-line global-require
+          picture: asset4, // eslint-disable-line global-require
           description: "Fortress",
           info: {
             type: "JPEG",

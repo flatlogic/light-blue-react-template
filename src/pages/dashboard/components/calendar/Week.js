@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Day from './Day'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 import s from './Calendar.module.scss'
 
 class Week extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DayNames from './DayNames'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 import Week from './Week'
 import moment from 'moment/moment'
 import s from './Calendar.module.scss'
