@@ -391,6 +391,7 @@ class Header extends React.Component {
             <NavItem>
               <NavLink
                 onClick={this.doLogout}
+                aria-label="Logout"
                 className={`${s.navItem} text-white`}
                 href="#"
               >

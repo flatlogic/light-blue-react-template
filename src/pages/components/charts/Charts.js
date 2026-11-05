@@ -11,13 +11,8 @@ import Sparklines from "../../../components/Sparklines";
 
 import ReactEchartsCore from "echarts-for-react/lib/core";
 
-import echarts from "echarts/lib/echarts";
+import * as echarts from "echarts";
 
-import "echarts/lib/chart/line";
-import "echarts/lib/chart/pie";
-import "echarts/lib/chart/themeRiver";
-import "echarts/lib/component/tooltip";
-import "echarts/lib/component/legend";
 
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";

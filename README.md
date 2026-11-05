@@ -87,3 +87,19 @@ Looking for premium themes and templates? Check out our other template at [flatl
 Light Blue React Template version is [MIT](https://github.com/flatlogic/light-blue-react-template/blob/master/LICENCE)-licensed.
 
 * that's a joke actually, but we would really appreciate if you support us by buying a premium version. Anyways free is just free and is limited to only few components, while premium one has more and comes with premium support.
+
+## Dependency maintenance and local checks
+
+Use Node.js 22.12 or newer and npm. `npm ci` installs the canonical
+`package-lock.json`; the superseded Yarn lock is removed after checking the
+resolved dependency graph. Vite replaces the ejected Webpack 4/CRA build tools
+without changing React, routing, SCSS, or dashboard pages.
+
+- `npm start`: development server.
+- `npm run build`: production output in `build/`.
+- `npm test`: regression tests against the production build using installed Google Chrome.
+- `npm audit`: all production and development dependencies.
+
+The previous Layout test depended on undeclared Enzyme/Chai packages and passed
+children to a layout that renders routes. Its browser replacement checks the
+actual login, layout, charts, tables, and typography routes.
